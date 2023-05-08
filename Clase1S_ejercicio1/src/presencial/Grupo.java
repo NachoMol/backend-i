@@ -14,6 +14,8 @@ public class Grupo {
     }
 
     public void newPersona(Persona persona){
+
+        if(persona.checkNumeroEdad() && persona.checkNombre())
         grupo.add(persona);
     }
 }

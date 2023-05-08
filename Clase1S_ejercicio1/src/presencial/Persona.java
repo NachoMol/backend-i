@@ -25,11 +25,11 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public boolean checkEdad(){
+    /* public boolean checkEdad(){
         return edad >= 18;
-    }
+    } */
 
-    public boolean checkEdadPosible (){
+    /* public boolean checkEdadPosible (){
         //definimos una respuesta estandar o inicial
         //operar lo que realice el método
         //devolver la respuesta
@@ -42,5 +42,19 @@ public class Persona {
 
         return respuesta;
 
+    } */
+
+    public boolean checkNumeroEdad(){
+        return (edad <= 120) && (Integer.toString(edad).length() <= 3) && (edad >= 18);
     }
+
+    public boolean checkNombre (){
+        return (nombre.length() >= 5) && (nombre.contains);
+    }
+
+    /* public boolean checkLetrasNombre(){
+        return nombre.matches("[a-zA-Z]+");
+    } */
+
+
 }
