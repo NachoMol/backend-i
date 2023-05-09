@@ -1,5 +1,7 @@
 package presencial;
 
+import javax.swing.text.html.HTMLDocument;
+
 public class Persona {
     private Integer edad;
     private String nombre;
@@ -49,12 +51,24 @@ public class Persona {
     }
 
     public boolean checkNombre (){
-        return (nombre.length() >= 5) && (nombre.contains);
+        return (nombre.length() >= 5);
     }
 
-    /* public boolean checkLetrasNombre(){
-        return nombre.matches("[a-zA-Z]+");
-    } */
+    public boolean checkLetrasNombre() {
+        boolean respuesta = false;
+
+        char[] letras = nombre.toCharArray();
+
+        for (char letra :letras){
+            if(!Character.isLetter(letra)){
+                return respuesta;
+            }
+        }
+
+        respuesta = true;
+
+        return respuesta;
+    }
 
 
 }

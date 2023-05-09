@@ -15,7 +15,7 @@ public class Grupo {
 
     public void newPersona(Persona persona){
 
-        if(persona.checkNumeroEdad() && persona.checkNombre())
+        if(persona.checkNumeroEdad() && persona.checkNombre() && persona.checkLetrasNombre())
         grupo.add(persona);
     }
 }
