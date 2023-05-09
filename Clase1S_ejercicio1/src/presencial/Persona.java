@@ -27,26 +27,7 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    /* public boolean checkEdad(){
-        return edad >= 18;
-    } */
-
-    /* public boolean checkEdadPosible (){
-        //definimos una respuesta estandar o inicial
-        //operar lo que realice el método
-        //devolver la respuesta
-
-        boolean respuesta= false;
-
-        if (edad>= 0 && edad<=120){
-            respuesta = true;
-        }
-
-        return respuesta;
-
-    } */
-
-    public boolean checkNumeroEdad(){
+    public boolean checkEdad(){
         return (edad <= 120) && (Integer.toString(edad).length() <= 3) && (edad >= 18);
     }
 
