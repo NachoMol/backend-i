@@ -41,7 +41,21 @@ class LiquidadorTest {
         assertEquals(restultadoEsperado, restultadoEsperado);
     }
 
+    @Test
+    public void NoPuedeLiquidarOK(){
+        //Dado
+        Empleado empleadoContratado2 = new EmpleadoContratado("Pompilia","Pompini","123456asdf", 120, 7);
+        Liquidador sujetoDePrueba = new LiquidadorEmpleadoEfectivo();
+        String restultadoEsperado = "La liquidación no pudo ser calculada";
 
+        //Cuando
+        String resultado = sujetoDePrueba.liquidarSueldo(empleadoContratado2);
+
+
+        //Entonces
+        System.out.println(sujetoDePrueba.liquidarSueldo(empleadoContratado2));
+        assertEquals(restultadoEsperado, restultadoEsperado);
+    }
 
 
     }
