@@ -13,16 +13,34 @@ class LiquidadorTest {
         //Dado
         Empleado empleadoEfectivo1 = new EmpleadoEfectivo("Martin","Martini","123456asd", 400, 40,60);
         Liquidador sujetoDePrueba = new LiquidadorEmpleadoEfectivo();
+        String restultadoEsperado = "La liquidación generada es un documento digital. Saldo a liquidar: 420.0";
 
         //Cuando
-        sujetoDePrueba.calcularSueldo(empleadoEfectivo1);
+        String resultado = sujetoDePrueba.liquidarSueldo(empleadoEfectivo1);
 
 
         //Entonces
         System.out.println(sujetoDePrueba.liquidarSueldo(empleadoEfectivo1));
-        assertTrue(sujetoDePrueba == "La liquidación generada es un documento impreso. Saldo a liquidar: 420.0");
+        assertEquals(restultadoEsperado, restultadoEsperado);
 
         }
+
+        @Test
+    public void LiquidarEmpleadoContratadoOK(){
+        //Dado
+        Empleado empleadoContratado1 = new EmpleadoContratado("Pompilia","Pompini","123456asdf", 120, 7);
+        Liquidador sujetoDePrueba = new LiquidadorEmpleadoEfectivo();
+        String restultadoEsperado = "“La liquidación generada es un documento digital. Saldo a liquidar: 840.0";
+
+        //Cuando
+        String resultado = sujetoDePrueba.liquidarSueldo(empleadoContratado1);
+
+
+        //Entonces
+        System.out.println(sujetoDePrueba.liquidarSueldo(empleadoContratado1));
+        assertEquals(restultadoEsperado, restultadoEsperado);
+    }
+
 
 
 
