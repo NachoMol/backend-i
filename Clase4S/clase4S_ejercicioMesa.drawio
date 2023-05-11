@@ -1,9 +1,107 @@
-<mxfile host="app.diagrams.net" modified="2023-05-11T01:20:40.305Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="wxTqwoByOfzhFRwqR5k_" version="21.2.9" type="device">
+<mxfile host="app.diagrams.net" modified="2023-05-11T02:18:08.946Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="VFJL_x9lfark0_-DUuf5" version="21.2.9" type="device">
   <diagram name="Page-1" id="4ToTiAgspWBBXMDzHIHO">
-    <mxGraphModel dx="1434" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1195" dy="637" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-1" value="Articulo" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-2" value="- nombre: String&lt;br&gt;- lote: int&lt;br&gt;- peso: int&lt;br&gt;- envasado: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-1">
+          <mxGeometry y="26" width="160" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-1">
+          <mxGeometry y="100" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-4" value="//constructor&lt;br&gt;//getters y setters" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-1">
+          <mxGeometry y="108" width="160" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-5" value="CompruebaCalidad" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="240" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-6" value="- inicial: analistaDeCalidad" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-5">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-13" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=-0.006;entryY=0.091;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Lkrm_1MaLV5EglNixJMT-5" target="Lkrm_1MaLV5EglNixJMT-10">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="160" y="40" as="sourcePoint" />
+            <mxPoint x="310" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-5">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-8" value="//constructor&lt;br&gt;//getters y setters&lt;br&gt;validarCalidadDelProducto(articulo: Articulo)String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-5">
+          <mxGeometry y="60" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-9" value="&amp;lt;&amp;lt;Abstract&amp;gt;&amp;gt;&lt;br&gt;AnalistaDeCalidad" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="414" y="250" width="160" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-10" value="-siguienteAnalista: AnalistaDeCalidad" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-9">
+          <mxGeometry y="40" width="160" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-9">
+          <mxGeometry y="84" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-12" value="+ abstract validar(articulo: Articulo) String&lt;br&gt;//getters, setters" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-9">
+          <mxGeometry y="92" width="160" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-15" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0.706;exitY=0.013;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.013;entryY=-0.042;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Lkrm_1MaLV5EglNixJMT-9" source="Lkrm_1MaLV5EglNixJMT-9" target="Lkrm_1MaLV5EglNixJMT-12">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-114" y="40" as="sourcePoint" />
+            <mxPoint x="9" y="40" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="113" y="-120" />
+              <mxPoint x="286" y="-120" />
+              <mxPoint x="286" y="75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-16" value="ControlLote" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="480" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-26" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" edge="1" parent="Lkrm_1MaLV5EglNixJMT-16">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="70" as="sourcePoint" />
+            <mxPoint x="240" y="-80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-18" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-16">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-19" value="+ validar(articulo: Articulo) String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-16">
+          <mxGeometry y="34" width="160" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-20" value="ControlPeso" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="505" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-21" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-20">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-22" value="+ validar(articulo: Articulo) String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-20">
+          <mxGeometry y="34" width="160" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-23" value="ControlEnvase" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="480" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-24" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-23">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-25" value="+ validar(articulo: Articulo) String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Lkrm_1MaLV5EglNixJMT-23">
+          <mxGeometry y="34" width="160" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-27" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.456;entryY=1.028;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="Lkrm_1MaLV5EglNixJMT-20" target="Lkrm_1MaLV5EglNixJMT-12">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="300" y="490" as="sourcePoint" />
+            <mxPoint x="481" y="409" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lkrm_1MaLV5EglNixJMT-28" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.731;entryY=1.069;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.544;exitY=-0.05;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Lkrm_1MaLV5EglNixJMT-23" target="Lkrm_1MaLV5EglNixJMT-12">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="490" y="515" as="sourcePoint" />
+            <mxPoint x="497" y="412" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

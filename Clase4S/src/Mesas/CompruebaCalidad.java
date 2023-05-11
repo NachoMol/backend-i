@@ -7,10 +7,10 @@ public class CompruebaCalidad {
     private AnalistaDeCalidad lote;
 
     public CompruebaCalidad() {
-        lote= new ControlLote();
-        AnalistaDeCalidad peso= new ControlPeso();
+        lote = new ControlLote();
+        AnalistaDeCalidad peso = new ControlPeso();
         AnalistaDeCalidad envase = new ControlLote();
-        Manejador spam= new ManejadorSpam();
+        Manejador spam = new ManejadorSpam();
         lote.setSiguienteAnalista(peso);
         peso.setSiguienteAnalista(envase);
     }
@@ -28,6 +28,6 @@ public class CompruebaCalidad {
 
     }
 
-
+    //RESTA COMPLETAR BIEN PASOS VALIDACION, RETURN FINAL Y TESTEOS.
 
 }
