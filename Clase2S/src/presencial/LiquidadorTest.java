@@ -29,7 +29,7 @@ class LiquidadorTest {
     public void LiquidarEmpleadoContratadoOK(){
         //Dado
         Empleado empleadoContratado1 = new EmpleadoContratado("Pompilia","Pompini","123456asdf", 120, 7);
-        Liquidador sujetoDePrueba = new LiquidadorEmpleadoEfectivo();
+        Liquidador sujetoDePrueba = new LiquidadorEmpleadoContratado();
         String restultadoEsperado = "“La liquidación generada es un documento digital. Saldo a liquidar: 840.0";
 
         //Cuando
