@@ -6,8 +6,13 @@ public class CompruebaCalidad {
 
     private AnalistaDeCalidad lote;
 
-    public CompruebaCalidad(AnalistaDeCalidad inicial) {
-        this.lote = inicial;
+    public CompruebaCalidad() {
+        lote= new ControlLote();
+        AnalistaDeCalidad peso= new ControlPeso();
+        AnalistaDeCalidad envase = new ControlLote();
+        Manejador spam= new ManejadorSpam();
+        lote.setSiguienteAnalista(peso);
+        peso.setSiguienteAnalista(envase);
     }
 
     public AnalistaDeCalidad getInicial() {
@@ -18,13 +23,8 @@ public class CompruebaCalidad {
         this.lote = inicial;
     }
 
-    public void ValidarCalidadDelProducto() {
-        lote= new ControlLote();
-        AnalistaDeCalidad peso= new ControlPeso();
-        AnalistaDeCalidad envase = new ControlLote();
-        Manejador spam= new ManejadorSpam();
-        lote.setSiguienteAnalista(peso);
-        peso.setSiguienteAnalista(envase);
+    public String ValidarCalidadDelProducto(Articulo articulo) {
+        return lote.validar(articulo);
 
     }
 
