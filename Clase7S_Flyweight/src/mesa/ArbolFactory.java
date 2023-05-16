@@ -20,7 +20,9 @@ public class ArbolFactory {
         if (!arbolMap.containsKey(clave)){
             //no existe la clave --> instanciar un nuevo objeto
             arbolMap.put(clave,new Arbol(altura,horizontal,color,tipoArbol));
+            System.out.println("creando arbol");
         }
+
         return arbolMap.get(clave);
     }
 
