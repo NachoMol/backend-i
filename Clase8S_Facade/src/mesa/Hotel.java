@@ -1,31 +1,17 @@
 package mesa;
 
 public class Hotel {
-
-    private Integer fechaEntrada;
-    private Integer fechaSalida;
+    private String nombre;
     private String ciudad;
+    private String fechaEntrada;
+    private  String fechaSalida;
 
-    public Hotel(Integer fechaEntrada, Integer fechaSalida, String ciudad) {
-        this.fechaEntrada = fechaEntrada;
-        this.fechaSalida = fechaSalida;
-        this.ciudad = ciudad;
+    public String getNombre() {
+        return nombre;
     }
 
-    public Integer getFechaEntrada() {
-        return fechaEntrada;
-    }
-
-    public void setFechaEntrada(Integer fechaEntrada) {
-        this.fechaEntrada = fechaEntrada;
-    }
-
-    public Integer getFechaSalida() {
-        return fechaSalida;
-    }
-
-    public void setFechaSalida(Integer fechaSalida) {
-        this.fechaSalida = fechaSalida;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getCiudad() {
@@ -36,12 +22,39 @@ public class Hotel {
         this.ciudad = ciudad;
     }
 
+    public String getFechaEntrada() {
+        return fechaEntrada;
+    }
+
+    public void setFechaEntrada(String fechaEntrada) {
+        this.fechaEntrada = fechaEntrada;
+    }
+
     @Override
     public String toString() {
         return "Hotel{" +
-                "fechaEntrada=" + fechaEntrada +
-                ", fechaSalida=" + fechaSalida +
-                ", ciudad='" + ciudad + '\'' +
+                "Nombre Hotel ='" + nombre + '\'' +
+                ", Ciudad ='" + ciudad + '\'' +
+                ", Fecha Entrada ='" + fechaEntrada + '\'' +
+                ", Fecha Salida='" + fechaSalida + '\'' +
                 '}';
     }
+
+    public String getFechaSalida() {
+        return fechaSalida;
+    }
+
+    public void setFechaSalida(String fechaSalida) {
+        this.fechaSalida = fechaSalida;
+    }
+
+    public Hotel(String nombre, String ciudad, String fechaEntrada, String fechaSalida) {
+        this.nombre = nombre;
+        this.ciudad = ciudad;
+        this.fechaEntrada = fechaEntrada;
+        this.fechaSalida = fechaSalida;
+    }
+
+
+
 }

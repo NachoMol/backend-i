@@ -1,32 +1,18 @@
 package mesa;
 
 public class Vuelo {
-
-    private Integer fechaSalida;
-    private Integer fechaRegreso;
     private String origen;
     private String destino;
 
-    public Vuelo(Integer fechaSalida, Integer fechaRegreso, String origen, String destino) {
-        this.fechaSalida = fechaSalida;
-        this.fechaRegreso = fechaRegreso;
+
+
+    private String fechaSalida;
+    private String fechaRegreso;
+
+    public Vuelo(String origen, String destino, String fechaSalida, String fechaRegreso) {
         this.origen = origen;
         this.destino = destino;
-    }
-
-    public Integer getFechaSalida() {
-        return fechaSalida;
-    }
-
-    public void setFechaSalida(Integer fechaSalida) {
         this.fechaSalida = fechaSalida;
-    }
-
-    public Integer getFechaRegreso() {
-        return fechaRegreso;
-    }
-
-    public void setFechaRegreso(Integer fechaRegreso) {
         this.fechaRegreso = fechaRegreso;
     }
 
@@ -45,4 +31,33 @@ public class Vuelo {
     public void setDestino(String destino) {
         this.destino = destino;
     }
+
+
+    public String getFechaSalida() {
+        return fechaSalida;
+    }
+
+    public void setFechaSalida(String fechaSalida) {
+        this.fechaSalida = fechaSalida;
+    }
+
+    public String getFechaRegreso() {
+        return fechaRegreso;
+    }
+
+    public void setFechaRegreso(String fechaRegreso) {
+        this.fechaRegreso = fechaRegreso;
+    }
+
+    @Override
+    public String toString() {
+        return "Vuelo{" +
+                "Ciudad Origen='" + origen + '\'' +
+                ",Ciudad Destino='" + destino + '\'' +
+
+                ", Fecha Salida='" + fechaSalida + '\'' +
+                ", Fecha Regreso='" + fechaRegreso + '\'' +
+                '}';
+    }
 }
+
