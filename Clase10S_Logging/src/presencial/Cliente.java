@@ -30,13 +30,6 @@ public class Cliente {
 
         }
 
-
-
-
-
-
-
-
     }
 
 }
