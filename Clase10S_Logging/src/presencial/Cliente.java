@@ -7,7 +7,7 @@ public class Cliente {
         Lista listadoEnteros = new Lista();
 
         for(int i = 0; i < 6; i++){
-            listadoEnteros.agregarEnteros(10);
+            listadoEnteros.agregarEnteros(i);
         }
 
         
