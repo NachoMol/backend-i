@@ -1,1 +1,64 @@
 [2023-05-17 21:59:21] [ INFO ] [Lista:22] La lista creada tiene: 6 numeros enteros, superando los 5 elementos
+[2023-05-17 22:00:01] [ INFO ] [Lista:22] La lista creada tiene 6 numeros enteros, superando los 5 elementos
+[2023-05-17 22:13:38] [ INFO ] [Lista:30] La lista creada tiene 5 numeros enteros, superando los 5 elementos
+[2023-05-17 22:13:38] [ INFO ] [Lista:33] La lista creada tiene 10 numeros enteros, superando los 5 elementos
+[2023-05-17 22:15:28] [ INFO ] [Lista:36] El promedio de los valores de la lista es: 0
+[2023-05-17 22:15:28] [ INFO ] [Lista:36] El promedio de los valores de la lista es: 0
+[2023-05-17 22:15:28] [ INFO ] [Lista:36] El promedio de los valores de la lista es: 1
+[2023-05-17 22:15:28] [ INFO ] [Lista:36] El promedio de los valores de la lista es: 1
+[2023-05-17 22:15:28] [ INFO ] [Lista:30] La lista creada tiene 5 numeros enteros, superando los 5 elementos
+[2023-05-17 22:15:28] [ INFO ] [Lista:36] El promedio de los valores de la lista es: 2
+[2023-05-17 22:15:28] [ INFO ] [Lista:36] El promedio de los valores de la lista es: 2
+[2023-05-17 22:15:28] [ INFO ] [Lista:36] El promedio de los valores de la lista es: 3
+[2023-05-17 22:15:28] [ INFO ] [Lista:36] El promedio de los valores de la lista es: 3
+[2023-05-17 22:15:28] [ INFO ] [Lista:36] El promedio de los valores de la lista es: 4
+[2023-05-17 22:15:28] [ INFO ] [Lista:33] La lista creada tiene 10 numeros enteros, superando los 5 elementos
+[2023-05-17 22:15:28] [ INFO ] [Lista:36] El promedio de los valores de la lista es: 4
+[2023-05-17 22:15:28] [ INFO ] [Lista:36] El promedio de los valores de la lista es: 5
+[2023-05-17 22:15:45] [ INFO ] [Lista:30] La lista creada tiene 5 numeros enteros, superando los 5 elementos
+[2023-05-17 22:15:45] [ INFO ] [Lista:33] La lista creada tiene 10 numeros enteros, superando los 5 elementos
+[2023-05-17 22:15:45] [ INFO ] [Lista:34] El promedio de los valores de la lista es: 4
+[2023-05-17 22:27:08] [ INFO ] [Lista:35] La lista creada tiene 5 numeros enteros, superando los 5 elementos
+[2023-05-17 22:27:08] [ INFO ] [Lista:38] La lista creada tiene 10 numeros enteros, superando los 5 elementos
+[2023-05-17 22:27:08] [ INFO ] [Lista:39] El promedio de los valores de la lista es: 4
+[2023-05-17 22:27:55] [ INFO ] [Lista:35] La lista creada tiene 5 numeros enteros, superando los 5 elementos
+[2023-05-17 22:27:55] [ INFO ] [Lista:38] La lista creada tiene 10 numeros enteros, superando los 5 elementos
+[2023-05-17 22:27:55] [ INFO ] [Lista:39] El promedio de los valores de la lista es: 4
+[2023-05-17 22:31:39] [ INFO ] [Lista:35] La lista creada tiene 5 numeros enteros, superando los 5 elementos
+[2023-05-17 22:31:39] [ INFO ] [Lista:38] La lista creada tiene 10 numeros enteros, superando los 5 elementos
+[2023-05-17 22:31:39] [ INFO ] [Lista:39] El promedio de los valores de la lista es: 4
+[2023-05-17 22:33:54] [ INFO ] [Lista:35] La lista creada tiene 5 numeros enteros, superando los 5 elementos
+[2023-05-17 22:33:54] [ INFO ] [Lista:38] La lista creada tiene 10 numeros enteros, superando los 5 elementos
+[2023-05-17 22:36:30] [ INFO ] [Lista:35] La lista creada tiene 5 numeros enteros, superando los 5 elementos
+[2023-05-17 22:36:30] [ INFO ] [Lista:38] La lista creada tiene 10 numeros enteros, superando los 5 elementos
+[2023-05-17 22:38:05] [ ERROR] [Lista:21] La lista no tiene elementos
+[2023-05-17 22:38:05] [ INFO ] [Lista:36] La lista creada tiene 5 numeros enteros, superando los 5 elementos
+[2023-05-17 22:38:05] [ INFO ] [Lista:39] La lista creada tiene 10 numeros enteros, superando los 10 elementos
+[2023-05-17 22:40:45] [ ERROR] [Lista:21] La lista no tiene elementos
+[2023-05-17 22:40:45] [ INFO ] [Lista:31] 0
+[2023-05-17 22:40:45] [ INFO ] [Lista:31] 0
+[2023-05-17 22:40:45] [ INFO ] [Lista:31] 1
+[2023-05-17 22:40:45] [ INFO ] [Lista:31] 1
+[2023-05-17 22:40:45] [ INFO ] [Lista:39] La lista creada tiene 5 numeros enteros, superando los 5 elementos
+[2023-05-17 22:40:45] [ INFO ] [Lista:31] 2
+[2023-05-17 22:40:45] [ INFO ] [Lista:31] 2
+[2023-05-17 22:40:45] [ INFO ] [Lista:31] 3
+[2023-05-17 22:40:45] [ INFO ] [Lista:31] 3
+[2023-05-17 22:40:45] [ INFO ] [Lista:31] 4
+[2023-05-17 22:40:45] [ INFO ] [Lista:42] La lista creada tiene 10 numeros enteros, superando los 10 elementos
+[2023-05-17 22:40:45] [ INFO ] [Lista:31] 4
+[2023-05-17 22:40:45] [ INFO ] [Lista:31] 5
+[2023-05-17 22:41:03] [ ERROR] [Lista:21] La lista no tiene elementos
+[2023-05-17 22:41:03] [ INFO ] [Lista:31] El promedio de los numeros es: 0
+[2023-05-17 22:41:03] [ INFO ] [Lista:31] El promedio de los numeros es: 0
+[2023-05-17 22:41:03] [ INFO ] [Lista:31] El promedio de los numeros es: 1
+[2023-05-17 22:41:03] [ INFO ] [Lista:31] El promedio de los numeros es: 1
+[2023-05-17 22:41:03] [ INFO ] [Lista:39] La lista creada tiene 5 numeros enteros, superando los 5 elementos
+[2023-05-17 22:41:03] [ INFO ] [Lista:31] El promedio de los numeros es: 2
+[2023-05-17 22:41:03] [ INFO ] [Lista:31] El promedio de los numeros es: 2
+[2023-05-17 22:41:03] [ INFO ] [Lista:31] El promedio de los numeros es: 3
+[2023-05-17 22:41:03] [ INFO ] [Lista:31] El promedio de los numeros es: 3
+[2023-05-17 22:41:03] [ INFO ] [Lista:31] El promedio de los numeros es: 4
+[2023-05-17 22:41:03] [ INFO ] [Lista:42] La lista creada tiene 10 numeros enteros, superando los 10 elementos
+[2023-05-17 22:41:03] [ INFO ] [Lista:31] El promedio de los numeros es: 4
+[2023-05-17 22:41:03] [ INFO ] [Lista:31] El promedio de los numeros es: 5

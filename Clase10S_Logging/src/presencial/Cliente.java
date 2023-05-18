@@ -6,9 +6,36 @@ public class Cliente {
 
         Lista listadoEnteros = new Lista();
 
-        for(int i = 0; i < 6; i++){
-            listadoEnteros.agregarEnteros(i);
+        try {
+            listadoEnteros.promedioEnteros();
+
         }
+        catch (Exception e) {
+            e.printStackTrace();
+
+        }
+
+        for(int i = 0; i < 11; i++){
+
+            listadoEnteros.agregarEnteros(i);
+            try {
+                listadoEnteros.promedioEnteros();
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+
 
     }
 
