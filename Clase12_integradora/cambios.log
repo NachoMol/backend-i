@@ -1,0 +1,6 @@
+[2023-05-18 21:33:22] [ WARN ] [Cliente:34] Prestá atención a lo que se acaba de eliminar
+[2023-05-18 21:34:34] [ WARN ] [Cliente:34] Prestá atención a lo que se acaba de eliminar
+[2023-05-18 21:35:20] [ WARN ] [Cliente:34] Prestá atención a lo que se acaba de eliminar ID 2
+[2023-05-18 22:38:02] [ ERROR] [Cliente:37] Estás intentando insertar 2 id´s iguales
+[2023-05-18 22:38:02] [ DEBUG] [Cliente:40] rs3: org.h2.result.LocalResult@6ae5aa72 columns: 5 rows: 1 pos: -1
+[2023-05-18 22:38:02] [ INFO ] [Cliente:41] rs3: org.h2.result.LocalResult@6ae5aa72 columns: 5 rows: 1 pos: -1
