@@ -41,8 +41,10 @@ public class Cliente {
 
             ps_update.execute();
 
-            while (rs_select.next()){
-                System.out.println(rs_select.getString(3));
+            PreparedStatement ps_select2 = connection.prepareStatement(SQL_SELECT);
+            ResultSet rs_select2 = ps_select2.executeQuery();
+            while (rs_select2.next()){
+                System.out.println(rs_select2.getString(4));
             }
 
 
