@@ -30,7 +30,7 @@ public class PacienteService {
     }
 
     public List<Paciente> listarPaciente(){
-        return pacienteIDao.listar():
+        return pacienteIDao.listar();
     }
 
 }
