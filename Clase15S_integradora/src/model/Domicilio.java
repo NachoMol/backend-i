@@ -1,7 +1,6 @@
 package model;
 
 public class Domicilio {
-
     private int id;
     private String calle;
     private String numero;
