@@ -21,8 +21,8 @@ public class PacienteService {
         return pacienteIDao.buscar(id);
     }
 
-    public Paciente modificarPaciente(Paciente p){
-        return pacienteIDao.modificar(p);
+    public void modificarPaciente(Paciente p){
+        pacienteIDao.modificar(p);
     }
 
     public void eliminarPaciente (int id){
