@@ -28,4 +28,5 @@ public class PacienteServiceTest {
         Paciente paciente= pacienteService.buscarPaciente(idABuscar);
         Assertions.assertTrue(paciente!=null);
     }
+
 }
