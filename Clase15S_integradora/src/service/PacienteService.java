@@ -29,7 +29,7 @@ public class PacienteService {
         pacienteIDao.eliminar(id);
     }
 
-    public List<Paciente> listarPaciente(){
+    public List<Paciente> listarPacientes(){
         return pacienteIDao.listar();
     }
 

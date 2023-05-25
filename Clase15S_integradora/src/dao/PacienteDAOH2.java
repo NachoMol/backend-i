@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 public class PacienteDAOH2 implements IDao<Paciente>{
 
     private static final String SQL_SELECT_ALL="SELECT * FROM PACIENTES";
-    private static final String SQL_SELECT_ONE="SELECT * FORM PACIENTES WHERE ID = ?";
+    private static final String SQL_SELECT_ONE="SELECT * FROM PACIENTES WHERE ID = ?";
 
     @Override
     public Paciente guardar(Paciente paciente) {
