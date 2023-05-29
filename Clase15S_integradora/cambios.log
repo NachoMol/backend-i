@@ -46,3 +46,6 @@
 [2023-05-25 20:09:20] [ DEBUG] [OdontologoDAOArrayList:20] ingresamos al metodo listar de Odontologo en OdontologoDAOArrayList
 [2023-05-25 20:09:20] [ DEBUG] [OdontologoDAOArrayList:20] ingresamos al metodo listar de Odontologo en OdontologoDAOArrayList
 [2023-05-25 20:09:20] [ DEBUG] [OdontologoDAOArrayList:51] ingresamos al metodo listar de Odontologo en OdontologoDAOArrayList
+[2023-05-29 19:25:16] [ INFO ] [DomicilioDAOH2:49] iniciando operaciones de busqueda por IO: 1
+[2023-05-29 19:25:16] [ INFO ] [DomicilioDAOH2:49] iniciando operaciones de busqueda por IO: 2
+[2023-05-29 19:25:16] [ INFO ] [DomicilioDAOH2:49] iniciando operaciones de busqueda por IO: 2
