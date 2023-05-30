@@ -14,7 +14,7 @@ public class ManejadorEmpleados {
 
             for (Empleado empleado:empleados) {
 
-            String lineaAEnviar = empleado.getNombre() + ";" + empleado.getApellido() + ";" + empleado.getLegajo() + ";" + empleado.getSueldo();
+            String lineaAEnviar = empleado.getNombre() + ";" + empleado.getApellido() + ";" + empleado.getLegajo() + ";" + empleado.getSueldo() + "\n";
             bos.write(lineaAEnviar.getBytes());
             }
             bos.close();
