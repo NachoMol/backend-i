@@ -15,5 +15,5 @@ public class PacienteApplication {
 	public String holaPAciente(){
 		return "Hola Paciente";
 	}
-	
+
 }
