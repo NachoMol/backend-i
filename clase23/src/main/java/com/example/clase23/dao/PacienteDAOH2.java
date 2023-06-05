@@ -7,10 +7,7 @@ import com.example.clase23.service.PacienteService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,11 +17,41 @@ public class PacienteDAOH2 implements IDao<Paciente> {
     private static final String SQL_SELECT_ALL="SELECT * FROM PACIENTES";
     private static final String SQL_SELECT_ONE="SELECT * FROM PACIENTES WHERE ID=?";
     private static final String SQL_SELECT_BY_EMAIL="SELECT *FROM PACIENTES WHERE EMAIL=?";
+    private static final String SQL_INSERT="INSERT INTO PACIENTES (NOMBRE,APELLIDO,DOCUMENTO,FECHA_INGRESO,DOMICILIO,EMAIL) VALUES (?,?,?,?,?,?)";
 
 
     @Override
     public Paciente guardar(Paciente paciente) {
         LOGGER.info("Iniciando la operacion de guardado de un Paciente");
+                Connection connection = null;
+                DomicilioDAOH2 domicilioDAOH2 = new DomicilioDAOH2();
+                Domicilio domicilio=domicilioDAOH2.guardar(paciente.getDomicilio());
+                try{
+                   connection = BD.getConnection();
+                   PreparedStatement ps_insert=connection.prepareStatement(SQL_INSERT, Statement.RETURN_GENERATED_KEYS);
+                   ps_insert.setString(1,paciente.getNombre());
+                    ps_insert.setString(2,paciente.getApellido());
+                    ps_insert.setString(3,paciente.getDocumento());
+                    ps_insert.setDate(4,Date.valueOf(paciente.getFechaIngreso()));
+                    ps_insert.setInt(5,domicilio.getId());
+                    ps_insert.setString(6,paciente.getEmail());
+                    ps_insert.execute();
+
+                    ResultSet rs_insert = ps_insert.getGeneratedKeys();
+
+                    while (rs_insert.next()){
+                        paciente.setId(rs_insert.getInt(1));
+                    }
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }finally {
+                    try{
+                        connection.close();
+                    }catch (Exception ex){
+                        ex.printStackTrace();
+                    }
+                }
                 return paciente;
     }
 
