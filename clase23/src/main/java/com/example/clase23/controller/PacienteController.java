@@ -25,8 +25,10 @@ public class PacienteController {
         Paciente pacientebuscado = pacienteService.buscarPaciente(paciente.getId());
         if(pacientebuscado!=null){
             pacienteService.actualizarPaciente(paciente,id);
+            return "Paciente Actualizado"+" -"+paciente.getNombre()+" "+paciente.getApellido();
+        }else{
+            return "Paciente no encontrado: "+paciente.getId();
         }
-        return "Paciente Actualizado"+" -"+paciente.getNombre()+" "+paciente.getApellido();
     }
 
     @GetMapping("/{id}")
