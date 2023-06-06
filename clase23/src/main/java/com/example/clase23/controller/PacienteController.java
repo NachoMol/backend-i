@@ -20,20 +20,19 @@ public class PacienteController {
         return pacienteService.guardarPaciente(paciente);
     }
 
-    @PutMapping("/{id}")
-    public String actualizarPaciente(@RequestBody Paciente paciente, @PathVariable int id){
-        Paciente pacientebuscado = pacienteService.buscarPaciente(paciente.getId());
-        if(pacientebuscado!=null){
-            pacienteService.actualizarPaciente(paciente,id);
-            return "Paciente Actualizado"+" -"+paciente.getNombre()+" "+paciente.getApellido();
-        }else{
-            return "Paciente no encontrado: "+paciente.getId();
-        }
-    }
-
     @GetMapping("/{id}")
     public Paciente buscarPaciente(@PathVariable int id){
         return pacienteService.buscarPaciente(id);
     }
 
+    @PutMapping
+    public String actualizarPaciente(@RequestBody Paciente paciente){
+        Paciente pacientebuscado = pacienteService.buscarPaciente(paciente.getId());
+        if(pacientebuscado!=null){
+            pacienteService.actualizarPaciente(paciente);
+            return "Paciente Actualizado"+" -"+paciente.getNombre()+" "+paciente.getApellido();
+        }else{
+            return "Paciente no encontrado: "+paciente.getId();
+        }
+    }
 }

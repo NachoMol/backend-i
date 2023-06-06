@@ -125,8 +125,8 @@ public class PacienteDAOH2 implements IDao<Paciente> {
     }
 
     @Override
-    public void actualizar(Paciente paciente, int id) {
-        LOGGER.info("Iniciando la operacion de guardado de un Paciente");
+    public void actualizar(Paciente paciente) {
+        LOGGER.info("Iniciando la operacion de actualizado de un Paciente");
         Connection connection = null;
         DomicilioDAOH2 domicilioDAOH2 = new DomicilioDAOH2();
         Domicilio domicilio=domicilioDAOH2.guardar(paciente.getDomicilio());
@@ -139,12 +139,9 @@ public class PacienteDAOH2 implements IDao<Paciente> {
             ps_update.setDate(4,Date.valueOf(paciente.getFechaIngreso()));
             ps_update.setInt(5,domicilio.getId());
             ps_update.setString(6,paciente.getEmail());
-            ps_update.setInt(7,id);
+            ps_update.setInt(7,paciente.getId());
 
             ps_update.executeUpdate();
-
-
-                paciente.setId(id);
 
 
         }catch (Exception e){
