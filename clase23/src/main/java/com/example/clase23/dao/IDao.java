@@ -9,5 +9,5 @@ public interface IDao <T> {
     List<T> listarTodos();
     T buscarXString(String valor);
 
-    T actualizar(T t, int id);
+    void actualizar(T t, int id);
 }

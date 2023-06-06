@@ -125,7 +125,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
     }
 
     @Override
-    public Paciente actualizar(Paciente paciente, int id) {
+    public void actualizar(Paciente paciente, int id) {
         LOGGER.info("Iniciando la operacion de guardado de un Paciente");
         Connection connection = null;
         DomicilioDAOH2 domicilioDAOH2 = new DomicilioDAOH2();
@@ -156,7 +156,6 @@ public class PacienteDAOH2 implements IDao<Paciente> {
                 ex.printStackTrace();
             }
         }
-        return paciente;
     }
 
     @Override

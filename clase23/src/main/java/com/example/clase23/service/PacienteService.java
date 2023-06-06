@@ -17,7 +17,7 @@ public class PacienteService {
 
     public Paciente guardarPaciente(Paciente paciente){ return pacienteIDao.guardar(paciente);}
 
-    public Paciente actualizarPaciente(Paciente paciente, int id){return pacienteIDao.actualizar(paciente,id);}
+    public void actualizarPaciente(Paciente paciente, int id){pacienteIDao.actualizar(paciente,id);}
 
     public Paciente buscarPaciente(int id){return pacienteIDao.buscar(id);}
 }

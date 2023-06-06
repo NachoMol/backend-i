@@ -81,7 +81,6 @@ public class DomicilioDAOH2 implements IDao<Domicilio>{
     }
 
     @Override
-    public Domicilio actualizar(Domicilio domicilio, int id) {
-        return null;
+    public void actualizar(Domicilio domicilio, int id) {
     }
 }
