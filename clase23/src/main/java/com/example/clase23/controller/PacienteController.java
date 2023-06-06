@@ -21,7 +21,17 @@ public class PacienteController {
     }
 
     @PutMapping("/{id}")
-    public Paciente actualizarPaciente(@RequestBody Paciente paciente, @PathVariable int id){
-        return pacienteService.actualizarPaciente(paciente,id);
+    public String actualizarPaciente(@RequestBody Paciente paciente, @PathVariable int id){
+        Paciente pacientebuscado = pacienteService.buscarPaciente(paciente.getId());
+        if(pacientebuscado!=null){
+            pacienteService.actualizarPaciente(paciente,id);
+        }
+        return "Paciente Actualizado"+" -"+paciente.getNombre()+" "+paciente.getApellido();
     }
+
+    @GetMapping("/{id}")
+    public Paciente buscarPaciente(@PathVariable int id){
+        return pacienteService.buscarPaciente(id);
+    }
+
 }
