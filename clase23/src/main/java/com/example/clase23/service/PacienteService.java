@@ -14,4 +14,8 @@ public class PacienteService {
     public Paciente buscarPacienteXEmail(String email){
         return pacienteIDao.buscarXString(email);
     }
+
+    public Paciente guardarPaciente(Paciente paciente){ return pacienteIDao.guardar(paciente);}
+
+    public Paciente actualizarPaciente(Paciente paciente, int id){return pacienteIDao.actualizar(paciente,id);}
 }

@@ -17,7 +17,9 @@ public class PacienteDAOH2 implements IDao<Paciente> {
     private static final String SQL_SELECT_ALL="SELECT * FROM PACIENTES";
     private static final String SQL_SELECT_ONE="SELECT * FROM PACIENTES WHERE ID=?";
     private static final String SQL_SELECT_BY_EMAIL="SELECT *FROM PACIENTES WHERE EMAIL=?";
-    private static final String SQL_INSERT="INSERT INTO PACIENTES (NOMBRE,APELLIDO,DOCUMENTO,FECHA_INGRESO,DOMICILIO,EMAIL) VALUES (?,?,?,?,?,?)";
+    private static final String SQL_INSERT="INSERT INTO PACIENTES (NOMBRE,APELLIDO,DOCUMENTO,FECHA_INGRESO,DOMICILIO_ID,EMAIL) VALUES (?,?,?,?,?,?)";
+
+    private static final String SQL_UPDATE="UPDATE PACIENTES SET NOMBRE = ?, APELLIDO = ?, DOCUMENTO = ?, FECHA_INGRESO = ?, DOMICILIO_ID = ?, EMAIL = ? WHERE ID = ?;";
 
 
     @Override
@@ -54,6 +56,8 @@ public class PacienteDAOH2 implements IDao<Paciente> {
                 }
                 return paciente;
     }
+
+
 
     @Override
     public List<Paciente> listarTodos() {
@@ -114,6 +118,41 @@ public class PacienteDAOH2 implements IDao<Paciente> {
             try {
                 connection.close();
             }catch (SQLException ex){
+                ex.printStackTrace();
+            }
+        }
+        return paciente;
+    }
+
+    @Override
+    public Paciente actualizar(Paciente paciente, int id) {
+        LOGGER.info("Iniciando la operacion de guardado de un Paciente");
+        Connection connection = null;
+        DomicilioDAOH2 domicilioDAOH2 = new DomicilioDAOH2();
+        Domicilio domicilio=domicilioDAOH2.guardar(paciente.getDomicilio());
+        try{
+            connection = BD.getConnection();
+            PreparedStatement ps_update=connection.prepareStatement(SQL_UPDATE);
+            ps_update.setString(1,paciente.getNombre());
+            ps_update.setString(2,paciente.getApellido());
+            ps_update.setString(3,paciente.getDocumento());
+            ps_update.setDate(4,Date.valueOf(paciente.getFechaIngreso()));
+            ps_update.setInt(5,domicilio.getId());
+            ps_update.setString(6,paciente.getEmail());
+            ps_update.setInt(7,id);
+
+            ps_update.executeUpdate();
+
+
+                paciente.setId(id);
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try{
+                connection.close();
+            }catch (Exception ex){
                 ex.printStackTrace();
             }
         }

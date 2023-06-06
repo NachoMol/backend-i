@@ -7,6 +7,9 @@ public class Domicilio {
     private String localidad;
     private String provincia;
 
+    public Domicilio() {
+    }
+
     @Override
     public String toString() {
         return "Domicilio{" +

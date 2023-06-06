@@ -79,4 +79,9 @@ public class DomicilioDAOH2 implements IDao<Domicilio>{
     public Domicilio buscarXString(String valor) {
         return null;
     }
+
+    @Override
+    public Domicilio actualizar(Domicilio domicilio, int id) {
+        return null;
+    }
 }
