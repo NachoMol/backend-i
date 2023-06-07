@@ -14,10 +14,13 @@ public class PacienteService {
     public Paciente buscarPacienteXEmail(String email){
         return pacienteIDao.buscarXString(email);
     }
-
-    public Paciente guardarPaciente(Paciente paciente){ return pacienteIDao.guardar(paciente);}
-
-    public void actualizarPaciente(Paciente paciente){pacienteIDao.actualizar(paciente);}
-
-    public Paciente buscarPaciente(int id){return pacienteIDao.buscar(id);}
+    public Paciente guardarPaciente(Paciente paciente){
+        return pacienteIDao.guardar(paciente);
+    }
+    public Paciente buscarPaciente(Integer id){
+        return pacienteIDao.buscar(id);
+    }
+    public void actualizarPaciente(Paciente paciente){
+        pacienteIDao.actualizar(paciente);
+    }
 }

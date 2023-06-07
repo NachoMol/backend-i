@@ -16,48 +16,49 @@ public class PacienteDAOH2 implements IDao<Paciente> {
     private static final Logger LOGGER=Logger.getLogger(PacienteDAOH2.class);
     private static final String SQL_SELECT_ALL="SELECT * FROM PACIENTES";
     private static final String SQL_SELECT_ONE="SELECT * FROM PACIENTES WHERE ID=?";
-    private static final String SQL_SELECT_BY_EMAIL="SELECT *FROM PACIENTES WHERE EMAIL=?";
-    private static final String SQL_INSERT="INSERT INTO PACIENTES (NOMBRE,APELLIDO,DOCUMENTO,FECHA_INGRESO,DOMICILIO_ID,EMAIL) VALUES (?,?,?,?,?,?)";
-
-    private static final String SQL_UPDATE="UPDATE PACIENTES SET NOMBRE = ?, APELLIDO = ?, DOCUMENTO = ?, FECHA_INGRESO = ?, DOMICILIO_ID = ?, EMAIL = ? WHERE ID = ?;";
-
+    private static final String SQL_SELECT_BY_EMAIL="SELECT * FROM PACIENTES WHERE EMAIL=?";
+    private static final String SQL_UPDATE="UPDATE PACIENTES SET NOMBRE=?, APELLIDO=?, DOCUMENTO=?, FECHA_INGRESO=?, DOMICILIO_ID=?, EMAIL=? WHERE ID=?";
+    private final static String SQL_DROP_CREATE_2="DROP TABLE IF EXISTS PACIENTES;" +
+            "CREATE TABLE PACIENTES (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL," +
+            " APELLIDO VARCHAR(100) NOT NULL, DOCUMENTO VARCHAR(100) NOT NULL, FECHA_INGRESO DATE NOT NULL," +
+            " DOMICILIO_ID INT, EMAIL VARCHAR(100) NOT NULL)";
+    private static final String SQL_INSERT="INSERT INTO PACIENTES (NOMBRE,APELLIDO,DOCUMENTO,FECHA_INGRESO,DOMICILIO_ID,EMAIL)" +
+            " VALUES (?,?,?,?,?,?)";
 
     @Override
     public Paciente guardar(Paciente paciente) {
         LOGGER.info("Iniciando la operacion de guardado de un Paciente");
-                Connection connection = null;
-                DomicilioDAOH2 domicilioDAOH2 = new DomicilioDAOH2();
-                Domicilio domicilio=domicilioDAOH2.guardar(paciente.getDomicilio());
-                try{
-                   connection = BD.getConnection();
-                   PreparedStatement ps_insert=connection.prepareStatement(SQL_INSERT, Statement.RETURN_GENERATED_KEYS);
-                   ps_insert.setString(1,paciente.getNombre());
-                    ps_insert.setString(2,paciente.getApellido());
-                    ps_insert.setString(3,paciente.getDocumento());
-                    ps_insert.setDate(4,Date.valueOf(paciente.getFechaIngreso()));
-                    ps_insert.setInt(5,domicilio.getId());
-                    ps_insert.setString(6,paciente.getEmail());
-                    ps_insert.execute();
-
-                    ResultSet rs_insert = ps_insert.getGeneratedKeys();
-
-                    while (rs_insert.next()){
-                        paciente.setId(rs_insert.getInt(1));
-                    }
-
-                }catch (Exception e){
-                    e.printStackTrace();
-                }finally {
-                    try{
-                        connection.close();
-                    }catch (Exception ex){
-                        ex.printStackTrace();
-                    }
-                }
-                return paciente;
+        Connection connection=null;
+        try{
+            connection=BD.getConnection();
+            DomicilioDAOH2 domicilioDAOH2= new DomicilioDAOH2();
+            Domicilio domicilio=domicilioDAOH2.guardar(paciente.getDomicilio());
+            PreparedStatement ps= connection.prepareStatement(SQL_INSERT, Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, paciente.getNombre());
+            ps.setString(2, paciente.getApellido());
+            ps.setString(3, paciente.getDocumento());
+            ps.setDate(4,Date.valueOf(paciente.getFechaIngreso()));
+            ps.setInt(5,domicilio.getId());
+            ps.setString(6, paciente.getEmail());
+            ps.execute();
+            ResultSet rs=ps.getGeneratedKeys();
+            while (rs.next()){
+                paciente.setId(rs.getInt(1));
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            try{
+                connection.close();
+            }
+            catch (Exception ex){
+                ex.printStackTrace();
+            }
+        }
+        return paciente;
     }
-
-
 
     @Override
     public List<Paciente> listarTodos() {
@@ -125,38 +126,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
     }
 
     @Override
-    public void actualizar(Paciente paciente) {
-        LOGGER.info("Iniciando la operacion de actualizado de un Paciente");
-        Connection connection = null;
-        DomicilioDAOH2 domicilioDAOH2 = new DomicilioDAOH2();
-        Domicilio domicilio=domicilioDAOH2.guardar(paciente.getDomicilio());
-        try{
-            connection = BD.getConnection();
-            PreparedStatement ps_update=connection.prepareStatement(SQL_UPDATE);
-            ps_update.setString(1,paciente.getNombre());
-            ps_update.setString(2,paciente.getApellido());
-            ps_update.setString(3,paciente.getDocumento());
-            ps_update.setDate(4,Date.valueOf(paciente.getFechaIngreso()));
-            ps_update.setInt(5,domicilio.getId());
-            ps_update.setString(6,paciente.getEmail());
-            ps_update.setInt(7,paciente.getId());
-
-            ps_update.executeUpdate();
-
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }finally {
-            try{
-                connection.close();
-            }catch (Exception ex){
-                ex.printStackTrace();
-            }
-        }
-    }
-
-    @Override
-    public Paciente buscar(int id) {
+    public Paciente buscar(Integer id) {
         Connection connection= null;
         Paciente paciente=null;
         Domicilio domicilio=null;
@@ -183,6 +153,42 @@ public class PacienteDAOH2 implements IDao<Paciente> {
             }
         }
         return paciente;
+
+    }
+
+    @Override
+    public void actualizar(Paciente paciente) {
+        LOGGER.info("Inicializando la operación de actualización de datos");
+        Connection connection=null;
+        try{
+            connection= BD.getConnection();
+            DomicilioDAOH2 daoAux= new DomicilioDAOH2();
+            daoAux.actualizar(paciente.getDomicilio());
+            PreparedStatement ps_Update= connection.prepareStatement(SQL_UPDATE);
+            //ACA VIENEN LOS SIGNOS DE INTERROGACIÓN
+            ps_Update.setString(1,paciente.getNombre());
+            ps_Update.setString(2, paciente.getApellido());
+            ps_Update.setString(3, paciente.getDocumento());
+            ps_Update.setDate(4,Date.valueOf(paciente.getFechaIngreso()));
+            //de donde sacabamos el dom?
+            ps_Update.setInt(5,paciente.getDomicilio().getId());
+            ps_Update.setString(6, paciente.getEmail());
+            ps_Update.setInt(7,paciente.getId());
+            ps_Update.execute();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try{
+                connection.close();
+            }catch (SQLException ex){
+                ex.printStackTrace();
+            }
+        }
+    }
+
+    @Override
+    public void eliminar(Integer id) {
 
     }
 

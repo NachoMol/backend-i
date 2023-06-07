@@ -12,34 +12,32 @@ import java.util.List;
 @Component
 public class DomicilioDAOH2 implements IDao<Domicilio>{
 
-    private final static String SQL_INSERT="INSERT INTO DOMICILIOS(CALLE,NUMERO,LOCALIDAD,PROVINCIA) VALUES (?,?,?,?)";
-    private final static String SQL_SEARCH="SELECT * FROM DOMICILIOS WHERE ID = ?";
+    private final static String SQL_INSERT="INSERT INTO DOMICILIOS (CALLE, NUMERO,LOCALIDAD, PROVINCIA) VALUES (?,?,?,?)";
+    private final static String SQL_BUSCAR="SELECT * FROM DOMICILIOS WHERE ID=?";
     @Override
     public Domicilio guardar(Domicilio domicilio) {
-        Connection connection = null;
-
+        Connection connection=null;
         try{
-            connection = BD.getConnection();
-            PreparedStatement ps_insert=connection.prepareStatement(SQL_INSERT, Statement.RETURN_GENERATED_KEYS);
-            ps_insert.setString(1,domicilio.getCalle());
-            ps_insert.setString(2,domicilio.getNumero());
-            ps_insert.setString(3,domicilio.getLocalidad());
-            ps_insert.setString(4,domicilio.getProvincia());
-
-            ps_insert.execute();
-
-            ResultSet rs_insert = ps_insert.getGeneratedKeys();
-
-            while (rs_insert.next()){
-                domicilio.setId(rs_insert.getInt(1));
+            connection=BD.getConnection();
+            PreparedStatement ps= connection.prepareStatement(SQL_INSERT, Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1,domicilio.getCalle());
+            ps.setString(2, domicilio.getNumero());
+            ps.setString(3, domicilio.getLocalidad());
+            ps.setString(4, domicilio.getProvincia());
+            ps.execute();
+            ResultSet rs= ps.getGeneratedKeys();
+            while(rs.next()){
+                domicilio.setId(rs.getInt(1));
             }
-
-        }catch (Exception e){
+        }
+        catch (Exception e){
             e.printStackTrace();
-        }finally {
+        }
+        finally {
             try{
                 connection.close();
-            }catch (Exception ex){
+            }
+            catch (Exception ex){
                 ex.printStackTrace();
             }
         }
@@ -47,27 +45,41 @@ public class DomicilioDAOH2 implements IDao<Domicilio>{
     }
 
     @Override
-    public Domicilio buscar(int id) {
-        Connection connection = null;
-        Domicilio domicilio = null;
+    public Domicilio buscar(Integer id) {
+        Connection connection=null;
+        Domicilio domicilio=null;
         try{
-            connection = BD.getConnection();
-            PreparedStatement ps = connection.prepareStatement(SQL_SEARCH);
+            connection=BD.getConnection();
+            PreparedStatement ps= connection.prepareStatement(SQL_BUSCAR);
             ps.setInt(1,id);
-            ResultSet rs_search = ps.executeQuery();
-            while (rs_search.next()){
-                domicilio= new Domicilio(rs_search.getInt(1),rs_search.getString(2),rs_search.getString(3),rs_search.getString(4),rs_search.getString(5));
+            ResultSet rs=ps.executeQuery();
+            while(rs.next()){
+                domicilio=new Domicilio(rs.getInt(1),rs.getString(2),rs.getString(3),
+                        rs.getString(4),rs.getString(5));
             }
-        }catch (Exception e){
+        }
+        catch (Exception e){
             e.printStackTrace();
-        }finally {
-            try {
+        }
+        finally {
+            try{
                 connection.close();
-            }catch (Exception ex){
+            }
+            catch (Exception ex){
                 ex.printStackTrace();
             }
         }
         return domicilio;
+    }
+
+    @Override
+    public void actualizar(Domicilio domicilio) {
+
+    }
+
+    @Override
+    public void eliminar(Integer id) {
+
     }
 
     @Override
@@ -78,9 +90,5 @@ public class DomicilioDAOH2 implements IDao<Domicilio>{
     @Override
     public Domicilio buscarXString(String valor) {
         return null;
-    }
-
-    @Override
-    public void actualizar(Domicilio domicilio) {
     }
 }

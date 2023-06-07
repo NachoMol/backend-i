@@ -11,9 +11,6 @@ public class Paciente {
     private Domicilio domicilio;
     private String email;
 
-    public Paciente() {
-    }
-
     public Paciente(String nombre, String apellido, String documento, LocalDate fechaIngreso, Domicilio domicilio, String email) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -31,6 +28,9 @@ public class Paciente {
         this.fechaIngreso = fechaIngreso;
         this.domicilio = domicilio;
         this.email = email;
+    }
+
+    public Paciente() {
     }
 
     public String getEmail() {
@@ -100,6 +100,4 @@ public class Paciente {
     public void setDomicilio(Domicilio domicilio) {
         this.domicilio = domicilio;
     }
-
-
 }

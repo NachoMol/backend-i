@@ -7,9 +7,6 @@ public class Domicilio {
     private String localidad;
     private String provincia;
 
-    public Domicilio() {
-    }
-
     @Override
     public String toString() {
         return "Domicilio{" +
@@ -74,5 +71,8 @@ public class Domicilio {
         this.numero = numero;
         this.localidad = localidad;
         this.provincia = provincia;
+    }
+
+    public Domicilio() {
     }
 }
