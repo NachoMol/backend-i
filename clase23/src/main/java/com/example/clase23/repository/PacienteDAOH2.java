@@ -1,9 +1,7 @@
-package com.example.clase23.dao;
+package com.example.clase23.repository;
 
-import com.example.clase23.dao.BD;
 import com.example.clase23.model.Domicilio;
 import com.example.clase23.model.Paciente;
-import com.example.clase23.service.PacienteService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 

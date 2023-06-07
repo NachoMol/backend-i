@@ -50,4 +50,47 @@ public class TurnoController {
 
         return response;
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Turno> eliminarTurno(@PathVariable Integer id){
+        ResponseEntity<Turno> response;
+
+        Turno turnoBuscado = turnoService.buscarTurno(id);
+
+        if(turnoBuscado!=null){
+            turnoService.eliminarTurno(id);
+            response = ResponseEntity.ok().build();
+        }else{
+            response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
+        return response;
+    }
+
+    @PutMapping
+    public ResponseEntity<Turno> actualizarTurno(Turno turno){
+        ResponseEntity<Turno> response;
+
+        Turno turnoBuscado = turnoService.buscarTurno(turno.getId());
+
+        if(turnoBuscado!=null){
+            turnoService.actualizarTurno(turno);
+            response = ResponseEntity.ok(turno);
+        }else{
+            response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
+        return response;
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Turno> buscarTurno(@PathVariable Integer id){
+
+        Turno turnoBuscado = turnoService.buscarTurno(id);
+
+        if(turnoBuscado!= null){
+            return ResponseEntity.ok(turnoBuscado);
+        }else{
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
+    }
+
 }

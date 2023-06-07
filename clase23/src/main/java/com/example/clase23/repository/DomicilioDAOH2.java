@@ -1,4 +1,4 @@
-package com.example.clase23.dao;
+package com.example.clase23.repository;
 
 import com.example.clase23.model.Domicilio;
 import org.springframework.stereotype.Component;

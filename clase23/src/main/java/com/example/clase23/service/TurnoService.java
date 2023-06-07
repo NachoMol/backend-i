@@ -1,6 +1,6 @@
 package com.example.clase23.service;
 
-import com.example.clase23.dao.IDao;
+import com.example.clase23.repository.IDao;
 import com.example.clase23.model.Turno;
 import org.springframework.stereotype.Service;
 
@@ -22,4 +22,17 @@ public class TurnoService {
     public List<Turno> listarTurnos(){
         return turnoIDao.listarTodos();
     }
+
+    public void eliminarTurno(Integer id){
+        turnoIDao.eliminar(id);
+    }
+
+    public void actualizarTurno(Turno turno){
+        turnoIDao.actualizar(turno);
+    }
+
+    public Turno buscarTurno(Integer id){
+        return turnoIDao.buscar(id);
+    }
+
 }
