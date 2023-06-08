@@ -1,8 +1,10 @@
 package com.example.clase23.service;
 
-import com.example.clase23.repository.IDao;
+import com.example.clase23.dao.IDao;
 import com.example.clase23.model.Odontologo;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class OdontologoService {
@@ -14,8 +16,10 @@ public class OdontologoService {
     public Odontologo guardarOdontologo(Odontologo odontologo){
         return odontologoIDao.guardar(odontologo);
     }
-
-    public Odontologo buscarOdongoloto(Integer id){
+    public Odontologo buscarOdontologo(Integer id){
         return odontologoIDao.buscar(id);
+    }
+    public List<Odontologo> listadoOdontologos(){
+        return odontologoIDao.listarTodos();
     }
 }

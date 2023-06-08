@@ -3,7 +3,6 @@ package com.example.clase23.model;
 import java.time.LocalDate;
 
 public class Turno {
-
     private Integer id;
     private Paciente paciente;
     private Odontologo odontologo;
