@@ -161,7 +161,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
         try{
             connection= BD.getConnection();
             DomicilioDAOH2 daoAux= new DomicilioDAOH2();
-            Domicilio nuevoDomicilio = daoAux.guardar(paciente.getDomicilio());
+            daoAux.guardar(paciente.getDomicilio());
             PreparedStatement ps_Update= connection.prepareStatement(SQL_UPDATE);
             //ACA VIENEN LOS SIGNOS DE INTERROGACIÓN
             ps_Update.setString(1,paciente.getNombre());
@@ -169,7 +169,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
             ps_Update.setString(3, paciente.getDocumento());
             ps_Update.setDate(4,Date.valueOf(paciente.getFechaIngreso()));
             //de donde sacabamos el dom?
-            ps_Update.setInt(5,nuevoDomicilio.getId());
+            ps_Update.setInt(5,paciente.getDomicilio().getId());
             ps_Update.setString(6, paciente.getEmail());
             ps_Update.setInt(7,paciente.getId());
             ps_Update.execute();
