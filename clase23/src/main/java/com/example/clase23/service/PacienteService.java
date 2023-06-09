@@ -1,6 +1,6 @@
 package com.example.clase23.service;
 
-import com.example.clase23.dao.IDao;
+import com.example.clase23.repository.IDao;
 import com.example.clase23.model.Paciente;
 import org.springframework.stereotype.Service;
 

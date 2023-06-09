@@ -1,11 +1,11 @@
-package com.example.clase23.dao;
+package com.example.clase23.repository;
 
 import com.example.clase23.model.Turno;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-@Component
+@Repository
 public class TurnoDAOLista implements IDao<Turno> {
     private List<Turno>turnos;
 
