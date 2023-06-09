@@ -20,4 +20,19 @@ public class TurnoService {
         // mucho código de control
         return turnoIDao.listarTodos();
     }
+
+    public void actualizarTurno(Turno turno){
+        turnoIDao.actualizar(turno);
+    }
+
+    public Turno buscarTurno(Integer id){
+        return turnoIDao.buscar(id);
+    }
+
+    public void eliminarTurno(int id){
+        turnoIDao.eliminar(id);
+    }
+
+
+
 }

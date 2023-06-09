@@ -23,4 +23,5 @@ public class OdontologoController {
     public ResponseEntity<List<Odontologo>> listarOdontologos(){
         return ResponseEntity.ok(odontologoService.listadoOdontologos());
     }
+
 }

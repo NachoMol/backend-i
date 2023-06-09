@@ -13,6 +13,8 @@ import java.util.List;
 public class OdontologoDAOH2 implements IDao<Odontologo> {
     private static final String SQL_INSERT="INSERT INTO ODONTOLOGOS(NOMBRE, APELLIDO, MATRICULA) VALUES(?,?,?)";
     private static final String SQL_SELECT_ALL="SELECT * FROM ODONTOLOGOS";
+
+    private static final String SQL_SELECT_ONE="SELECT * FROM ODONTOLOGOS WHERE ID=?";
     private static final Logger LOGGER= Logger.getLogger(OdontologoDAOH2.class);
     @Override
     public Odontologo guardar(Odontologo odontologo) {
@@ -46,7 +48,26 @@ public class OdontologoDAOH2 implements IDao<Odontologo> {
 
     @Override
     public Odontologo buscar(Integer id) {
-        return null;
+        Connection connection= null;
+        Odontologo odontologo= null;
+        try{
+            connection= BD.getConnection();
+            PreparedStatement ps_SelectOne= connection.prepareStatement(SQL_SELECT_ONE);
+            ps_SelectOne.setInt(1,id);
+            ResultSet rsOdontologo= ps_SelectOne.executeQuery();
+            while (rsOdontologo.next()){
+                odontologo= new Odontologo(rsOdontologo.getInt(1),rsOdontologo.getString(2), rsOdontologo.getString(3),rsOdontologo.getString(4));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                connection.close();
+            }catch (SQLException ex){
+                ex.printStackTrace();
+            }
+        }
+        return odontologo;
     }
 
     @Override
