@@ -7,3 +7,6 @@
 [2023-06-05 21:56:57] [ INFO ] [PacienteDAOH2:161] Inicializando la operación de actualización de datos
 [2023-06-07 22:00:06] [ INFO ] [OdontologoDAOH2:17] Guardando un odontologo
 [2023-06-07 22:03:48] [ INFO ] [OdontologoDAOH2:17] Guardando un odontologo
+[2023-06-08 22:29:33] [ INFO ] [PacienteDAOH2:28] Iniciando la operacion de guardado de un Paciente
+[2023-06-08 22:29:35] [ INFO ] [PacienteDAOH2:159] Inicializando la operación de actualización de datos
+[2023-06-08 22:29:38] [ INFO ] [PacienteDAOH2:28] Iniciando la operacion de guardado de un Paciente
