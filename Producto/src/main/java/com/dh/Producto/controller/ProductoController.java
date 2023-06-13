@@ -4,10 +4,9 @@ import com.dh.Producto.entity.Producto;
 import com.dh.Producto.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/productos")
@@ -17,5 +16,10 @@ public class ProductoController {
     @PostMapping
     public ResponseEntity<Producto> crearProducto(@RequestBody Producto producto){
         return ResponseEntity.ok(productoService.guardarProducto(producto));
+    }
+
+    @GetMapping("/conStock")
+    public ResponseEntity<List<?>> listarConStock(){
+        return ResponseEntity.ok().body(productoService.productosConStock());
     }
 }
