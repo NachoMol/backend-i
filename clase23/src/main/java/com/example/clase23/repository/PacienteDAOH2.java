@@ -1,7 +1,7 @@
 package com.example.clase23.repository;
 
-import com.example.clase23.model.Domicilio;
-import com.example.clase23.model.Paciente;
+import com.example.clase23.entities.Domicilio;
+import com.example.clase23.entities.Paciente;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Repository;
 

@@ -1,10 +1,9 @@
 package com.example.clase23.repository;
 
-import com.example.clase23.model.Domicilio;
+import com.example.clase23.entities.Domicilio;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

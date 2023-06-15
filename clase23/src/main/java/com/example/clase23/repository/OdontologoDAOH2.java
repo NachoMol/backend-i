@@ -1,6 +1,6 @@
 package com.example.clase23.repository;
 
-import com.example.clase23.model.Odontologo;
+import com.example.clase23.entities.Odontologo;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Repository;
 

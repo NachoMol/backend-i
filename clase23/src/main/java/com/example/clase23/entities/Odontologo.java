@@ -1,4 +1,4 @@
-package com.example.clase23.model;
+package com.example.clase23.entities;
 
 public class Odontologo {
     private Integer id;

@@ -1,6 +1,6 @@
 package com.example.clase23.repository;
 
-import com.example.clase23.model.Turno;
+import com.example.clase23.entities.Turno;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
