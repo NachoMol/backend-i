@@ -23,7 +23,7 @@ public class Odontologo {
     private String nombre;
     @Column
     private String apellido;
-    @Column
+    @Column(unique = true, nullable = false)
     private String matricula;
 
     @OneToMany(mappedBy = "odontologo")
