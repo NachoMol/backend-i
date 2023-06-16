@@ -8,7 +8,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="odontologos")
@@ -26,7 +28,7 @@ public class Odontologo {
     @Column(unique = true, nullable = false)
     private String matricula;
 
-    @OneToMany(mappedBy = "odontologo")
+    @OneToMany(mappedBy = "odontologo",fetch = FetchType.LAZY)
     @JsonIgnore
-    private List<Turno> turnos;
+    private Set<Turno> turnos;
 }

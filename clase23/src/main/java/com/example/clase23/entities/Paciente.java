@@ -1,12 +1,15 @@
 package com.example.clase23.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.engine.internal.Cascade;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "pacientes")
@@ -32,7 +35,8 @@ public class Paciente {
     @Column(unique = true)
     private String email;
 
-    @OneToMany(mappedBy = "paciente")
-    private List<Turno> turnos;
+    @OneToMany(mappedBy = "paciente", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<Turno> turnos = new HashSet<>();
 
 }
