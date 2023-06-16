@@ -1,24 +1,33 @@
 package com.example.clase23.service;
 
+
 import com.example.clase23.entities.Odontologo;
+import com.example.clase23.repository.OdontologoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OdontologoService {
-    private IDao<Odontologo> odontologoIDao;
 
-    public OdontologoService(IDao<Odontologo> odontologoIDao) {
-        this.odontologoIDao = odontologoIDao;
-    }
+    @Autowired
+    private OdontologoRepository odontologoRepository;
     public Odontologo guardarOdontologo(Odontologo odontologo){
-        return odontologoIDao.guardar(odontologo);
+        return odontologoRepository.save(odontologo);
     }
-    public Odontologo buscarOdontologo(Integer id){
-        return odontologoIDao.buscar(id);
+    public Optional<Odontologo> buscarOdontologoPorId(Long id){
+        return odontologoRepository.findById(id);
     }
-    public List<Odontologo> listadoOdontologos(){
-        return odontologoIDao.listarTodos();
+    public void eliminarOdontologo(Long id){
+        odontologoRepository.deleteById(id);
     }
+    public void actualizarOdontologo(Odontologo odontologo){
+        odontologoRepository.save(odontologo);
+    }
+    public List<Odontologo> devolverOdontologos(){
+        return odontologoRepository.findAll();
+    }
+
 }

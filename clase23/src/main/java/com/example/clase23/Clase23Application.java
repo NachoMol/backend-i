@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Clase23Application {
 
 	public static void main(String[] args) {
-		BD.crearTablas();
 		SpringApplication.run(Clase23Application.class, args);
 	}
 

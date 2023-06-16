@@ -1,22 +1,34 @@
 package com.example.clase23.service;
 
+import com.example.clase23.entities.Odontologo;
 import com.example.clase23.entities.Turno;
+import com.example.clase23.repository.OdontologoRepository;
+import com.example.clase23.repository.TurnoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TurnoService {
-    private IDao<Turno> turnoIDao;
 
-    public TurnoService(IDao<Turno> turnoIDao) {
-        this.turnoIDao = turnoIDao;
-    }
+    @Autowired
+    private TurnoRepository turnoRepository;
     public Turno guardarTurno(Turno turno){
-        return turnoIDao.guardar(turno);
+        return turnoRepository.save(turno);
     }
-    public List<Turno> listarTurnos(){
-        // mucho código de control
-        return turnoIDao.listarTodos();
+    public Optional<Turno> buscarTurnoPorId(Long id){
+        return turnoRepository.findById(id);
     }
+    public void eliminarTurno(Long id){
+        turnoRepository.deleteById(id);
+    }
+    public void actualizarTurno(Turno turno){
+        turnoRepository.save(turno);
+    }
+    public List<Turno> devolverTurnos(){
+        return turnoRepository.findAll();
+    }
+
 }

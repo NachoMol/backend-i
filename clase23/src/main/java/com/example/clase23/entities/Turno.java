@@ -1,52 +1,30 @@
 package com.example.clase23.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "turnos")
+@Getter
+@Setter
+@AllArgsConstructor
 public class Turno {
-    private Integer id;
-    private Paciente paciente;
-    private Odontologo odontologo;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private LocalDate fecha;
 
-    public Turno() {
-    }
+    @ManyToOne
+    @JoinColumn(name = "paciente_id", referencedColumnName = "id")
+    private Paciente paciente;
 
-    public Turno(Integer id, Paciente paciente, Odontologo odontologo, LocalDate fecha) {
-        this.id = id;
-        this.paciente = paciente;
-        this.odontologo = odontologo;
-        this.fecha = fecha;
-    }
+    @ManyToOne
+    @JoinColumn(name = "odontologo_id", referencedColumnName = "id")
+    private Odontologo odontologo;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Paciente getPaciente() {
-        return paciente;
-    }
-
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
-    }
-
-    public Odontologo getOdontologo() {
-        return odontologo;
-    }
-
-    public void setOdontologo(Odontologo odontologo) {
-        this.odontologo = odontologo;
-    }
-
-    public LocalDate getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
 }

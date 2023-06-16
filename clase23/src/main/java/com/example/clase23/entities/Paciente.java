@@ -6,6 +6,7 @@ import org.hibernate.engine.internal.Cascade;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "pacientes")
@@ -23,10 +24,15 @@ public class Paciente {
     private String documento;
     @Column
     private LocalDate fechaIngreso;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "domicilio_id", referencedColumnName = "id")
     private Domicilio domicilio;
+
     @Column(unique = true)
     private String email;
+
+    @OneToMany(mappedBy = "paciente")
+    private List<Turno> turnos;
 
 }
