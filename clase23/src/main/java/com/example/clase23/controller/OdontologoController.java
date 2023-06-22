@@ -2,6 +2,7 @@ package com.example.clase23.controller;
 
 import com.example.clase23.entities.Odontologo;
 import com.example.clase23.entities.Paciente;
+import com.example.clase23.exception.ResourceNotFoundException;
 import com.example.clase23.service.OdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -51,8 +52,13 @@ public class OdontologoController {
         }
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<Odontologo> eliminarOdontologo(@PathVariable Long id){
-        odontologoService.eliminarOdontologo(id);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<Odontologo> eliminarOdontologo(@PathVariable Long id) throws ResourceNotFoundException {
+        Optional odontologoBuscado = odontologoService.buscarOdontologoPorId(id);
+                if (odontologoBuscado.isPresent()){
+                    odontologoService.eliminarOdontologo(id);
+                    return ResponseEntity.ok().build();
+                }else{
+                 throw new ResourceNotFoundException("No existe el id asociado en la base de datos" + id);
+                }
     }
 }
