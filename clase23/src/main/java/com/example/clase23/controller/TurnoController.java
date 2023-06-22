@@ -29,16 +29,16 @@ public class TurnoController {
 
     @GetMapping
     public ResponseEntity<List<Turno>> traerTurnos(){
-        return ResponseEntity.ok(turnoService.listarTurnos());
+        return ResponseEntity.ok(turnoService.devolverTurnos());
     }
     @PostMapping
-    public ResponseEntity<TurnoDTO> registrarTurno(@RequestBody TurnoDTO turnoDTO){
-        ResponseEntity<TurnoDTO> respuesta;
+    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno){
+        ResponseEntity<Turno> respuesta;
         //tratamiento
-        Optional<Paciente> pacienteBuscado=pacienteService.buscarPacientePorID(turnoDTO.getPacienteId());
-        Optional<Odontologo> odontologoBuscado=odontologoService.buscarOdontologoPorId(turnoDTO.getOdontologoId());
+        Optional<Paciente> pacienteBuscado=pacienteService.buscarPacientePorID(turno.getId());
+        Optional<Odontologo> odontologoBuscado=odontologoService.buscarOdontologoPorId(turno.getOdontologo().getId());
         if (pacienteBuscado.isPresent() && odontologoBuscado.isPresent()){
-            respuesta=ResponseEntity.ok(turnoService.guardarTurno(turnoDTO));
+            respuesta=ResponseEntity.ok(turnoService.guardarTurno(turno));
         }
         else{
             //solo devolvemos el código bad request
