@@ -1,5 +1,6 @@
-/*package com.example.clase23.controller;
+package com.example.clase23.controller;
 
+import com.example.clase23.dto.TurnoDTO;
 import com.example.clase23.entities.Odontologo;
 import com.example.clase23.entities.Paciente;
 import com.example.clase23.entities.Turno;
@@ -11,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/turnos")
@@ -30,13 +32,13 @@ public class TurnoController {
         return ResponseEntity.ok(turnoService.listarTurnos());
     }
     @PostMapping
-    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno){
-        ResponseEntity<Turno> respuesta;
+    public ResponseEntity<TurnoDTO> registrarTurno(@RequestBody TurnoDTO turnoDTO){
+        ResponseEntity<TurnoDTO> respuesta;
         //tratamiento
-        Paciente pacienteBuscado=pacienteService.buscarPaciente(turno.getPaciente().getId());
-        Odontologo odontologoBuscado=odontologoService.buscarOdontologo(turno.getOdontologo().getId());
-        if (pacienteBuscado!=null && odontologoBuscado!=null){
-            respuesta=ResponseEntity.ok(turnoService.guardarTurno(turno));
+        Optional<Paciente> pacienteBuscado=pacienteService.buscarPacientePorID(turnoDTO.getPacienteId());
+        Optional<Odontologo> odontologoBuscado=odontologoService.buscarOdontologoPorId(turnoDTO.getOdontologoId());
+        if (pacienteBuscado.isPresent() && odontologoBuscado.isPresent()){
+            respuesta=ResponseEntity.ok(turnoService.guardarTurno(turnoDTO));
         }
         else{
             //solo devolvemos el código bad request
@@ -45,4 +47,3 @@ public class TurnoController {
         return respuesta;
     }
 }
-*/
