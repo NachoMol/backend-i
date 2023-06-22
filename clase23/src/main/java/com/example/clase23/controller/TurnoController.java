@@ -1,6 +1,5 @@
 package com.example.clase23.controller;
 
-import com.example.clase23.dto.TurnoDTO;
 import com.example.clase23.entities.Odontologo;
 import com.example.clase23.entities.Paciente;
 import com.example.clase23.entities.Turno;
