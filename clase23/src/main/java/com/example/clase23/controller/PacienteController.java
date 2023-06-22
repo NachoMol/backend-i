@@ -63,7 +63,7 @@ public class PacienteController {
             pacienteService.eliminarPaciente(id);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Se elimino correctamente el paciente");
         }else{
-            throw new ResourceNotFoundException("No existe el id del paciente asociado en la base de datos" + id);
+            throw new ResourceNotFoundException("No existe el id asociado en la base de datos" + id);
         }
     }
 }
