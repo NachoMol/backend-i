@@ -16,5 +16,10 @@ public class GlobalException {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(rnfe.getMessage());
     }
 
+    @ExceptionHandler({ResolutionException.class})
+    public ResponseEntity<String> tratamientoBadRequestException(BadRequestException bre){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(bre.getMessage());
+    }
+
 
 }

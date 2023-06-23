@@ -3,6 +3,7 @@ package com.example.clase23.controller;
 import com.example.clase23.entities.Odontologo;
 import com.example.clase23.entities.Paciente;
 import com.example.clase23.entities.Turno;
+import com.example.clase23.exception.BadRequestException;
 import com.example.clase23.exception.ResourceNotFoundException;
 import com.example.clase23.service.OdontologoService;
 import com.example.clase23.service.PacienteService;
@@ -34,19 +35,17 @@ public class TurnoController {
         return ResponseEntity.ok(turnoService.devolverTurnos());
     }
     @PostMapping
-    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno){
-        ResponseEntity<Turno> respuesta;
+    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) throws BadRequestException{
         //tratamiento
         Optional<Paciente> pacienteBuscado=pacienteService.buscarPacientePorID(turno.getId());
         Optional<Odontologo> odontologoBuscado=odontologoService.buscarOdontologoPorId(turno.getOdontologo().getId());
         if (pacienteBuscado.isPresent() && odontologoBuscado.isPresent()){
-            respuesta=ResponseEntity.ok(turnoService.guardarTurno(turno));
+            return ResponseEntity.ok(turnoService.guardarTurno(turno));
         }
         else{
             //solo devolvemos el código bad request
-            respuesta=ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+            throw new BadRequestException("No existe el id asociado en la base de datos");
         }
-        return respuesta;
     }
 
     @DeleteMapping("/{id")
