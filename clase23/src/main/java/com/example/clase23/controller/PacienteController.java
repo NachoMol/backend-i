@@ -34,7 +34,7 @@ public class PacienteController {
 
     }
     @PutMapping
-    public ResponseEntity<String> actualizarPaciente(@RequestBody Paciente paciente){
+    public ResponseEntity<String> actualizarPaciente(@RequestBody Paciente paciente) throws ResourceNotFoundException{
         //vamos a consultar si ese paciente existe
         Optional<Paciente> pacientebuscado= pacienteService.buscarPacientePorID(paciente.getId());
         if(pacientebuscado.isPresent()){
@@ -42,7 +42,7 @@ public class PacienteController {
             return ResponseEntity.ok("Paciente Actualizado -"+paciente.getNombre()+" "+paciente.getApellido());
         }
         else{
-            return ResponseEntity.badRequest().body("Paciente No Encontrado"+paciente.getId()+"Nombre: "+paciente.getNombre());
+            throw new ResourceNotFoundException("Paciente No Encontrado: "+ "Id: " + paciente.getId()+ "Nombre: "+paciente.getNombre());
         }
 
     }
