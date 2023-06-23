@@ -21,7 +21,7 @@ public class PacienteController {
     public ResponseEntity<Paciente> registrarPaciente(@RequestBody Paciente paciente){
         return ResponseEntity.ok(pacienteService.guardarPaciente(paciente));
     }
-    @GetMapping("/id/{id}")
+    @GetMapping("/ {id}")
     public ResponseEntity<Paciente> buscarPaciente(@PathVariable Long id){
         Optional<Paciente> pacienteBuscado= pacienteService.buscarPacientePorID(id);
         if (pacienteBuscado.isPresent()){

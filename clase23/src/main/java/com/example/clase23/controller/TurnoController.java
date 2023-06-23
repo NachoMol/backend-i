@@ -48,7 +48,7 @@ public class TurnoController {
         }
     }
 
-    @DeleteMapping("/{id")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarTurno(@PathVariable Long id) throws ResourceNotFoundException{
         Optional<Turno> turnoBuscado= turnoService.buscarTurnoPorId(id);
         if(turnoBuscado.isPresent()){

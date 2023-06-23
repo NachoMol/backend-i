@@ -11,12 +11,12 @@ import java.lang.module.ResolutionException;
 @ControllerAdvice
 public class GlobalException {
 
-    @ExceptionHandler({ResolutionException.class})
+    @ExceptionHandler({ResourceNotFoundException.class})
     public ResponseEntity<String> tratamientoResourceNotFoundException(ResourceNotFoundException rnfe){
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(rnfe.getMessage());
     }
 
-    @ExceptionHandler({ResolutionException.class})
+    @ExceptionHandler({BadRequestException.class})
     public ResponseEntity<String> tratamientoBadRequestException(BadRequestException bre){
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(bre.getMessage());
     }
