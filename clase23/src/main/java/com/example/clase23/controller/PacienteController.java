@@ -1,6 +1,7 @@
 package com.example.clase23.controller;
 
 import com.example.clase23.entities.Paciente;
+import com.example.clase23.exception.BadRequestException;
 import com.example.clase23.exception.ResourceNotFoundException;
 import com.example.clase23.service.PacienteService;
 import org.apache.catalina.valves.rewrite.ResolverImpl;
@@ -21,13 +22,13 @@ public class PacienteController {
     public ResponseEntity<Paciente> registrarPaciente(@RequestBody Paciente paciente){
         return ResponseEntity.ok(pacienteService.guardarPaciente(paciente));
     }
-    @GetMapping("/ {id}")
-    public ResponseEntity<Paciente> buscarPaciente(@PathVariable Long id){
+    @GetMapping("/{id}")
+    public ResponseEntity<Paciente> buscarPaciente(@PathVariable Long id) throws BadRequestException{
         Optional<Paciente> pacienteBuscado= pacienteService.buscarPacientePorID(id);
         if (pacienteBuscado.isPresent()){
             return ResponseEntity.ok(pacienteBuscado.get());
         }else{
-            return ResponseEntity.notFound().build();
+            throw new BadRequestException("Paciente no encontrado");
         }
 
 
