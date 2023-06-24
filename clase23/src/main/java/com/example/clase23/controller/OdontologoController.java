@@ -20,7 +20,7 @@ public class OdontologoController {
 
 
     @PostMapping
-    public ResponseEntity<Odontologo> guardarOdontologo(@RequestBody Odontologo odontologo){
+    public ResponseEntity<Odontologo> agregarOdontologo(@RequestBody Odontologo odontologo){
         return ResponseEntity.ok(odontologoService.guardarOdontologo(odontologo));
     }
 
@@ -41,7 +41,7 @@ public class OdontologoController {
     }
 
     @PutMapping
-    public ResponseEntity<String> actualizarOdontologo(@RequestBody Odontologo odontologo) {
+    public ResponseEntity<String> modificarOdontologo(@RequestBody Odontologo odontologo) {
         //vamos a consultar si ese paciente existe
         Optional<Odontologo> odontologoBuscado = odontologoService.buscarOdontologoPorId(odontologo.getId());
         if (odontologoBuscado.isPresent()) {
