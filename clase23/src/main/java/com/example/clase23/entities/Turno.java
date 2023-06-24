@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 public class Turno {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,4 +28,6 @@ public class Turno {
     @JoinColumn(name = "odontologo_id", referencedColumnName = "id")
     private Odontologo odontologo;
 
+    public Turno() {
+    }
 }
