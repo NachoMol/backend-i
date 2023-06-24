@@ -1,8 +1,10 @@
 package com.example.clase23.service;
 
 
+import com.example.clase23.controller.OdontologoController;
 import com.example.clase23.entities.Odontologo;
 import com.example.clase23.repository.OdontologoRepository;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
