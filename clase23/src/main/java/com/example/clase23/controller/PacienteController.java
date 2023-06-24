@@ -35,12 +35,12 @@ public class PacienteController {
     }
 
     @GetMapping("/{correo}")
-    public ResponseEntity<Paciente> buscarPacientePorCorreo(@PathVariable String correo){
+    public ResponseEntity<Paciente> buscarPacientePorCorreo(@PathVariable String correo) throws ResourceNotFoundException{
         Optional<Paciente> pacienteBuscado= pacienteService.buscarPacientePorCorreo(correo);
         if(pacienteBuscado.isPresent()){
             return ResponseEntity.ok(pacienteBuscado.get());
         }else{
-            return ResponseEntity.notFound().build();
+            throw new ResourceNotFoundException("No existe el correo asociado en la base de datos.");
         }
     }
 
