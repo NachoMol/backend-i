@@ -22,7 +22,7 @@ public class PacienteController {
     public ResponseEntity<Paciente> agregarPaciente(@RequestBody Paciente paciente){
         return ResponseEntity.ok(pacienteService.guardarPaciente(paciente));
     }
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public ResponseEntity<Paciente> buscarPaciente(@PathVariable Long id) throws BadRequestException{
         Optional<Paciente> pacienteBuscado= pacienteService.buscarPacientePorID(id);
         if (pacienteBuscado.isPresent()){
