@@ -25,7 +25,7 @@ public class PacienteService {
    public void actualizarPaciente(Paciente paciente){
        pacienteRepository.save(paciente);
    }
-   public List<Paciente> devolverPacientes(){
+   public List<Paciente> listarPacientes(){
        return pacienteRepository.findAll();
    }
    public Optional<Paciente> buscarPacientePorCorreo(String correo){

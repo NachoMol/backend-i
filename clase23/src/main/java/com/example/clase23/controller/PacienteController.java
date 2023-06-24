@@ -4,12 +4,12 @@ import com.example.clase23.entities.Paciente;
 import com.example.clase23.exception.BadRequestException;
 import com.example.clase23.exception.ResourceNotFoundException;
 import com.example.clase23.service.PacienteService;
-import org.apache.catalina.valves.rewrite.ResolverImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -33,8 +33,24 @@ public class PacienteController {
 
 
     }
+
+    @GetMapping("/{correo}")
+    public ResponseEntity<Paciente> buscarPacientePorCorreo(@PathVariable String correo){
+        Optional<Paciente> pacienteBuscado= pacienteService.buscarPacientePorCorreo(correo);
+        if(pacienteBuscado.isPresent()){
+            return ResponseEntity.ok(pacienteBuscado.get());
+        }else{
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Paciente>> listarPacientes(){
+        return ResponseEntity.ok(pacienteService.listarPacientes());
+    }
+
     @PutMapping
-    public ResponseEntity<String> actualizarPaciente(@RequestBody Paciente paciente) throws ResourceNotFoundException{
+    public ResponseEntity<String> modificarPaciente(@RequestBody Paciente paciente) throws ResourceNotFoundException{
         //vamos a consultar si ese paciente existe
         Optional<Paciente> pacientebuscado= pacienteService.buscarPacientePorID(paciente.getId());
         if(pacientebuscado.isPresent()){
@@ -45,15 +61,6 @@ public class PacienteController {
             throw new ResourceNotFoundException("Paciente No Encontrado: "+ "Id: " + paciente.getId()+ "Nombre: "+paciente.getNombre());
         }
 
-    }
-    @GetMapping("/{correo}")
-    public ResponseEntity<Paciente> buscarPacientePorCorreo(@PathVariable String correo){
-        Optional<Paciente> pacienteBuscado= pacienteService.buscarPacientePorCorreo(correo);
-        if(pacienteBuscado.isPresent()){
-            return ResponseEntity.ok(pacienteBuscado.get());
-        }else{
-            return ResponseEntity.notFound().build();
-        }
     }
 
     @DeleteMapping("/{id}")
