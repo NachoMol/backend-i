@@ -18,6 +18,9 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 public class Odontologo {
+    public Odontologo() {
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

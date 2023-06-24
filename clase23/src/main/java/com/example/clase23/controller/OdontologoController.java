@@ -48,7 +48,7 @@ public class OdontologoController {
             odontologoService.actualizarOdontologo(odontologo);
             return ResponseEntity.ok("Odontologo Actualizado -" + odontologo.getNombre() + " " + odontologo.getApellido());
         } else {
-            return ResponseEntity.badRequest().body("Odontologo No Encontrado" + odontologo.getId() + "Nombre: " + odontologo.getNombre());
+            return ResponseEntity.badRequest().body("Odontologo no encontrado. Id: " + odontologo.getId() + ", Nombre: " + odontologo.getNombre());
         }
     }
     @DeleteMapping("/{id}")
@@ -58,7 +58,7 @@ public class OdontologoController {
                     odontologoService.eliminarOdontologo(id);
                     return ResponseEntity.ok().build();
                 }else{
-                 throw new ResourceNotFoundException("No existe el id asociado en la base de datos" + id);
+                 throw new ResourceNotFoundException("No existe el id asociado en la base de datos. Id: " + id);
                 }
     }
 }
