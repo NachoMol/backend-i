@@ -12,7 +12,7 @@ import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import org.apache.log4j.Logger;
 import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
@@ -20,6 +20,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/turnos")
 public class TurnoController {
+
+    private static final Logger logger= Logger.getLogger(TurnoController.class);
     private TurnoService turnoService;
     private PacienteService pacienteService;
     private OdontologoService odontologoService;
@@ -31,11 +33,13 @@ public class TurnoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Turno>> traerTurnos(){
+    public ResponseEntity<List<Turno>> listarTurnos(){
+        logger.info("Procesando solicitud de listar turnos");
         return ResponseEntity.ok(turnoService.devolverTurnos());
     }
     @PostMapping
     public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) throws BadRequestException{
+        logger.info("Procesando solicitud de registrar un turno");
         //tratamiento
         Optional<Paciente> pacienteBuscado=pacienteService.buscarPacientePorID(turno.getId());
         Optional<Odontologo> odontologoBuscado=odontologoService.buscarOdontologoPorId(turno.getOdontologo().getId());
@@ -43,17 +47,19 @@ public class TurnoController {
             return ResponseEntity.ok(turnoService.guardarTurno(turno));
         }
         else{
-            //solo devolvemos el código bad request
+            logger.error("Falló la solicitud de registrar un turno");
             throw new BadRequestException("No existe el id asociado en la base de datos");
         }
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarTurno(@PathVariable Long id) throws ResourceNotFoundException{
+        logger.info("Procesando solicitud de eliminar un turno");
         Optional<Turno> turnoBuscado= turnoService.buscarTurnoPorId(id);
         if(turnoBuscado.isPresent()){
             return ResponseEntity.ok("Se elimino el turno corrrectamente con id: " + id);
         }else{
+            logger.error("Falló la solicitud de eliminar un turno");
             throw new ResourceNotFoundException("No existe el id asociado en la base de datos" + id);
         }
     }
