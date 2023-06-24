@@ -25,13 +25,13 @@ public class OdontologoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Odontologo> buscarOdontologo(@PathVariable Long id){
+    public ResponseEntity<Odontologo> buscarOdontologo(@PathVariable Long id) throws ResourceNotFoundException{
         Optional<Odontologo> odontologoBuscado= odontologoService.buscarOdontologoPorId(id);
 
         if(odontologoBuscado.isPresent()){
             return ResponseEntity.ok(odontologoBuscado.get());
         }else{
-            return ResponseEntity.badRequest().build();
+            throw new ResourceNotFoundException("No existe el id asociado en la base de datos. Id: " + id);
         }
     }
 
@@ -41,14 +41,14 @@ public class OdontologoController {
     }
 
     @PutMapping
-    public ResponseEntity<String> modificarOdontologo(@RequestBody Odontologo odontologo) {
+    public ResponseEntity<String> modificarOdontologo(@RequestBody Odontologo odontologo) throws ResourceNotFoundException {
         //vamos a consultar si ese paciente existe
         Optional<Odontologo> odontologoBuscado = odontologoService.buscarOdontologoPorId(odontologo.getId());
         if (odontologoBuscado.isPresent()) {
             odontologoService.actualizarOdontologo(odontologo);
             return ResponseEntity.ok("Odontologo Actualizado -" + odontologo.getNombre() + " " + odontologo.getApellido());
         } else {
-            return ResponseEntity.badRequest().body("Odontologo no encontrado. Id: " + odontologo.getId() + ", Nombre: " + odontologo.getNombre());
+            throw new ResourceNotFoundException("No existe el id asociado en la base de datos. Id: " + odontologo.getId());
         }
     }
     @DeleteMapping("/{id}")
