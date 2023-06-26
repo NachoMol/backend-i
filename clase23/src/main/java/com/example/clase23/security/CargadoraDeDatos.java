@@ -21,8 +21,11 @@ public class CargadoraDeDatos implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         BCryptPasswordEncoder passwordEncoder= new BCryptPasswordEncoder();
-        String pass="password";
-        String passCifrada=passwordEncoder.encode(pass);
-        appUsuarioService.guardarUsuario(new AppUsuario("Diego","Rueda","diego@gmail.com",passCifrada, AppUsuarioRole.ROLE_USER));
+        String passUser="password";
+        String passAdmin="admin";
+        String passCifrada=passwordEncoder.encode(passUser);
+        String passCifradaAdmin=passwordEncoder.encode(passAdmin);
+        appUsuarioService.guardarUsuario(new AppUsuario("Usuario","Usuario","usuario@gmail.com",passCifrada, AppUsuarioRole.ROLE_USER));
+        appUsuarioService.guardarUsuario(new AppUsuario("Admin","Admin","admin@gmail.com",passCifradaAdmin, AppUsuarioRole.ROLE_ADMIN));
     }
 }
