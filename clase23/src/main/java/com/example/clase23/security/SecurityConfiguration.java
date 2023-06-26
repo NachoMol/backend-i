@@ -29,7 +29,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        super.configure(http);
+        http
+                .csrf().disable()
+                .authorizeRequests()
+                .antMatchers("/odontologos/**","/getAllOdontologos.html").hasRole("ADMIN")
+                .antMatchers("/turnos/**").hasAnyRole("ADMIN","USER")
+                .anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .and()
+                .logout();
+
     }
 
     @Bean
