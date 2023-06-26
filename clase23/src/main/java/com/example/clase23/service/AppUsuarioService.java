@@ -27,4 +27,8 @@ public class AppUsuarioService implements UserDetailsService {
         }
 
     }
+
+    public AppUsuario guardarUsuario(AppUsuario appUsuario){
+        return userRepository.save(appUsuario);
+    }
 }
