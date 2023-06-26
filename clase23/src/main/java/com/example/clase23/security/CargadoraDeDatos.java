@@ -13,20 +13,16 @@ import org.springframework.stereotype.Component;
 public class CargadoraDeDatos implements ApplicationRunner {
 
     private AppUsuarioService appUsuarioService;
-
+    @Autowired
     public CargadoraDeDatos(AppUsuarioService appUsuarioService) {
         this.appUsuarioService = appUsuarioService;
     }
 
-    @Autowired
-
-
-
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String pass = "password";
-        String passCifrada = passwordEncoder.encode(pass);
+        BCryptPasswordEncoder passwordEncoder= new BCryptPasswordEncoder();
+        String pass="password";
+        String passCifrada=passwordEncoder.encode(pass);
         appUsuarioService.guardarUsuario(new AppUsuario("Diego","Rueda","diego@gmail.com",passCifrada, AppUsuarioRole.ROLE_USER));
     }
 }
