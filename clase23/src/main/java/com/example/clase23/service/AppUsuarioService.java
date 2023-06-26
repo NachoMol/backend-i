@@ -23,7 +23,7 @@ public class AppUsuarioService implements UserDetailsService {
         if(usuarioBuscado.isPresent()){
             return usuarioBuscado.get();
         }else{
-            throw new UsernameNotFoundException("Usuario no encontrado. Email: " + username);
+            throw new UsernameNotFoundException("Usuario/a no encontrado. Email: " + username);
         }
 
     }
