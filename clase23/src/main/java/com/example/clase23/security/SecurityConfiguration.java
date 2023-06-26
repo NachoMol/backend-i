@@ -33,7 +33,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/index.html").hasAnyRole("ADMIN","USER")
-                .antMatchers("/odontologos/**","/getAllOdontologos.html").hasRole("ADMIN")
+                .antMatchers("/odontologos/**","/get_all_odontologos.html").hasRole("ADMIN")
+                .antMatchers("/odontologos/**","/post_odontologos.html").hasRole("ADMIN")
                 //FALTA AGREGAR EL RESTO DE METODOS DE ODONTOLOGOS (HTML TMB) PACIENTES e INDEX
                 .antMatchers("/turnos/**").hasAnyRole("ADMIN","USER")
                 .anyRequest().authenticated()
