@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema de Turnos - Clínica Odontológica</title>
+</head>
+<body>
+    <h1>Bienvenido al Sistema de Turnos</h1>
+    <nav>
+        <ul>
+            <li><a href="#turnos">Turnos</a></li>
+            <li><a href="#odontologos">Odontólogos</a></li>
+            <li><a href="#pacientes">Pacientes</a></li>
+        </ul>
+        <button id="logout-btn">Cerrar sesión</button>
+    </nav>
+
+    <section id="turnos">
+        <h2>Turnos</h2>
+        <ul>
+            <li><a href="agregar_turno.html">Agregar Turno</a></li>
+            <li><a href="listar_turnos.html">Listar Turnos</a></li>
+            <li><a href="eliminar_turno.html">Eliminar Turno</a></li>
+        </ul>
+    </section>
+
+    <section id="odontologos">
+        <h2>Odontólogos</h2>
+        <ul>
+            <li><a href="registrar_odontologo.html">Registrar Odontólogo</a></li>
+            <li><a href="listar_odontologos.html">Listar Odontólogos</a></li>
+            <li><a href="eliminar_odontologo.html">Eliminar Odontólogo</a></li>
+            <li><a href="modificar_odontologo.html">Modificar Odontólogo</a></li>
+        </ul>
+    </section>
+
+    <section id="pacientes">
+        <h2>Pacientes</h2>
+        <ul>
+            <li><a href="registrar_paciente.html">Registrar Paciente</a></li>
+            <li><a href="listar_pacientes.html">Listar Pacientes</a></li>
+            <li><a href="eliminar_paciente.html">Eliminar Paciente</a></li>
+            <li><a href="modificar_paciente.html">Modificar Paciente</a></li>
+        </ul>
+    </section>
+
+    <script>
+        const logoutButton = document.getElementById('logout-btn');
+        logoutButton.addEventListener('click', () => {
+            // Aquí puedes agregar la lógica para realizar el logout
+            // Puede ser una redirección a una página de inicio de sesión, limpiar la sesión actual, etc.
+            alert('Has cerrado sesión');
+        });
+    </script>
+</body>
+</html>
