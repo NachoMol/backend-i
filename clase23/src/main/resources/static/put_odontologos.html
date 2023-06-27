@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Modificar Odontólogo</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Turnos</a></li>
+            <li><a href="odontologos.html">Odontólogos</a></li>
+            <li><a href="pacientes.html">Pacientes</a></li>
+        </ul>
+        <button class="logout-button">Cerrar sesión</button>
+    </nav>
+
+    <section>
+        <h2>Modificar Odontólogo</h2>
+        <form id="modificar-odontologo-form">
+            <label for="odontologo-id">ID del Odontólogo:</label>
+            <input type="text" id="odontologo-id" name="odontologo-id" required>
+            <label for="odontologo-nombre">Nuevo Nombre:</label>
+            <input type="text" id="odontologo-nombre" name="odontologo-nombre" required>
+            <label for="odontologo-apellido">Nuevo Apellido:</label>
+            <input type="text" id="odontologo-apellido" name="odontologo-apellido" required>
+            <label for="odontologo-matricula">Nueva Matrícula:</label>
+            <input type="text" id="odontologo-matricula" name="odontologo-matricula" required>
+            <button type="submit">Modificar</button>
+        </form>
+        <div id="mensaje"></div>
+        <button onclick="window.location.href='index.html'">Volver al inicio</button>
+    </section>
+
+    <script src="put_odontologos.js"></script>
+</body>
+
+</html>
