@@ -15,21 +15,27 @@
     <section>
         <form id="add_new_odontologo">
             <div class="form-group">
-                <label for="first-name">Nombre:</label>
-                <input type="text" id="first-name" name="first-name" required>
+                <label class="control-label" for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre"
+                       placeholder="Ingrese el nombre"
+                       name="nombre" required></input>
             </div>
             <div class="form-group">
-                <label for="last-name">Apellido:</label>
-                <input type="text" id="last-name" name="last-name" required>
+                <label class="control-label" for="apellido">Apellido:</label>
+                <input type="text" class="form-control" id="apellido"
+                       placeholder="Ingrese el apellido"
+                       name="apellido" required></input>
             </div>
             <div class="form-group">
-                <label for="license-number">Matricula:</label>
-                <input type="text" id="license-number" name="license-number" required>
+                <label class="control-label" for="matricula">Matricula</label>
+                <input type="text" class="form-control" id="matricula"
+                       placeholder="Ingrese la matricula"
+                       name="matricula" required></input>
             </div>
-            <button type="submit" class="btn btn-danger" id="btn-add-new-odontologo">Agregar Odontologo</button>
+            <button type="submit" class="btn btn-danger" id="btn-add-new-odontologo">Guardar</button>
         </form>
     </section>
 
-    <script src="script.js"></script>
+    <script type="text/javascript" src="/js/post_odontologos.js"></script>
 </body>
 </html>

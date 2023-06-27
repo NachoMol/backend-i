@@ -9,9 +9,9 @@ window.addEventListener('load', function () {
 
        //creamos un JSON que tendrá los datos de la nueva película
         const formData = {
-            nombre: document.querySelector('#first-name').value,
-            apellido: document.querySelector('#last-name').value,
-            matricula: document.querySelector('#license-number').value,
+            nombre: document.querySelector('#nombre').value,
+            apellido: document.querySelector('#apellido').value,
+            matricula: document.querySelector('#matricula').value,
 
         };
         //invocamos utilizando la función fetch la API peliculas con el método POST que guardará
