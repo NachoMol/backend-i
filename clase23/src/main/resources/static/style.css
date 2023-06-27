@@ -114,3 +114,17 @@ section ul li a {
 section ul li a:hover {
     color: #f44336;
 }
+
+/* Estilos para la tabla de odontólogos */
+table {
+    margin: 0 auto; /* Centrar la tabla horizontalmente */
+    border-collapse: collapse; /* Colapsar los bordes de la tabla */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agregar una sombra alrededor de la tabla */
+  }
+  
+  /* Estilos para las celdas de la tabla */
+  th, td {
+    padding: 10px; /* Agregar un relleno a las celdas */
+    text-align: center; /* Centrar el contenido de las celdas */
+    border: 1px solid #ccc; /* Agregar bordes a las celdas */
+  }
