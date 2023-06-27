@@ -38,7 +38,7 @@ nav ul li a:hover {
     background-color: #ccc;
 }
 
-#logout-btn {
+.logout-button {
     background-color: #f44336;
     color: #fff;
     border: none;
@@ -46,7 +46,6 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Estilos específicos de las secciones */
 section {
     margin-top: 20px;
     text-align: center;
@@ -61,6 +60,9 @@ section ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section ul li {
@@ -95,10 +97,6 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #b3d9ff;
-}
-
-#logout-btn {
-    background-color: #f44336;
 }
 
 section {
