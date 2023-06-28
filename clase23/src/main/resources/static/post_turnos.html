@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema de Turnos - Agregar Odontologo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Agregar Odontologo</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <form id="add_new_turno">
+            <div class="form-group">
+                <label class="control-label" for="fecha">fecha:</label>
+                <input type="text" class="form-control" id="fecha"
+                       placeholder="Ingrese la fecha yyyy-mm-dd"
+                       name="fecha" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="pacienteId">Paciente:</label>
+                <input type="text" class="form-control" id="pacienteId"
+                       placeholder="Ingrese el id del paciente"
+                       name="pacienteId" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="odontologoId">Odontologo:</label>
+                <input type="text" class="form-control" id="odontologoId"
+                       placeholder="Ingrese el id del odontologo"
+                       name="odontologoId" required></input>
+            </div>
+            <button type="submit" class="btn btn-danger" id="btn-add-new-turno">Guardar</button>
+        </form>
+    </section>
+
+    <script type="text/javascript" src="/js/post_turnos.js"></script>
+</body>
+</html>

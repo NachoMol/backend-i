@@ -90,3 +90,5 @@
 [2023-06-27 16:16:12] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
 [2023-06-27 16:16:20] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
 [2023-06-27 16:36:20] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-06-27 16:39:43] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-06-27 16:39:45] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
