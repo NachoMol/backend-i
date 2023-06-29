@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
 
-    //Al cargar la pagina buscamos y obtenemos el formulario donde estará el odontologo a agregar
+    //Al cargar la pagina buscamos y obtenemos el formulario donde estará el paciente a agregar
     const formulario = document.querySelector('#add_new_paciente');
 
     //Ante un submit del formulario se ejecutará la siguiente funcion
@@ -12,12 +12,17 @@ window.addEventListener('load', function () {
             apellido: document.querySelector('#apellido').value,
             documento: document.querySelector('#documento').value,
             fechaIngreso: document.querySelector('#fechaIngreso').value,
-            domicilio: document.querySelector('#domicilio').value,
-            email: document.querySelector('#email').value,
+            domicilio:{
+                calle: document.querySelector('#calleDomicilio').value,
+                numero: document.querySelector('#numeroDomicilio').value,
+                localidad: document.querySelector('#localidadDomicilio').value,
+                provincia: document.querySelector('#provinciaDomicilio').value
+            },
+            email: document.querySelector('#email').value
 
         };
-        //invocamos utilizando la función fetch la API de odontologos con el método POST que guardará
-        //el odontologo en formato JSON
+        //invocamos utilizando la función fetch la API de pacientes con el método POST que guardará
+        //el paciente en formato JSON
         const url = '/pacientes';
         const settings = {
             method: 'POST',
@@ -30,7 +35,7 @@ window.addEventListener('load', function () {
         fetch(url, settings)
             .then(response => response.json())
             .then(data => {
-                 //Si no hay ningun error se muestra un mensaje diciendo el odontologo
+                 //Si no hay ningun error se muestra un mensaje diciendo el paciente
                  //se agrego bien
                  let successAlert = '<div class="alert alert-success alert-dismissible">' +
                      '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
@@ -54,15 +59,4 @@ window.addEventListener('load', function () {
                      resetUploadForm();})
     });
 
-
-
-
-    (function(){
-        let pathname = window.location.pathname;
-        if(pathname === "/"){
-            document.querySelector(".nav .nav-item a:first").addClass("active");
-        } else if (pathname == "/peliculaList.html") {
-            document.querySelector(".nav .nav-item a:last").addClass("active");
-        }
-    })();
 });
