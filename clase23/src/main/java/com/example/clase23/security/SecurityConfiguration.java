@@ -30,7 +30,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable()
+                /*.csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/index.html").hasAnyRole("ADMIN","USER")
                 .antMatchers("/odontologos/**","/get_all_odontologos.html").hasRole("ADMIN")
@@ -41,10 +41,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .and()
-                .logout();
-                /*.csrf().disable()
+                .logout();*/
+                .csrf().disable()
                 .authorizeRequests()
-                .antMatchers().permitAll();*/
+                .anyRequest().permitAll();
 
     }
 
