@@ -1,6 +1,7 @@
 package com.example.clase23.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.engine.internal.Cascade;
@@ -15,6 +16,7 @@ import java.util.Set;
 @Table(name = "pacientes")
 @Getter
 @Setter
+@AllArgsConstructor
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,4 +41,15 @@ public class Paciente {
     @JsonIgnore
     private Set<Turno> turnos = new HashSet<>();
 
+    public Paciente() {
+    }
+
+    public Paciente(String nombre, String apellido, String documento, LocalDate fechaIngreso, Domicilio domicilio, String email) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.documento = documento;
+        this.fechaIngreso = fechaIngreso;
+        this.domicilio = domicilio;
+        this.email = email;
+    }
 }
