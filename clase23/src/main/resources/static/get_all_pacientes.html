@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Listar Odontólogos</title>
+    <title>Listar Pacientes</title>
 </head>
 
 <body>
@@ -19,26 +19,29 @@
     </nav>
 
     <section>
-        <h2>Listar Odontólogos</h2>
-        <div id="div_odontologos_table">
-            <table id="odontologosTable">
+        <h2>Listar Pacientes</h2>
+        <div id="div_pacientes_table">
+            <table id="pacientesTable">
                 <thead>
                     <tr>
                         <th>Id</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
-                        <th>Matrícula</th>
+                        <th>Documento</th>
+                        <th>FechaIngreso</th>
+                        <th>ID del domicilio</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
-                <tbody id="odontologosTableBody">
-                    <!-- Aquí se generarán dinámicamente las filas de odontólogos -->
+                <tbody id="pacientesTableBody">
+                    <!-- Aquí se generarán dinámicamente las filas de pacientes -->
                 </tbody>
             </table>
         </div>
         <button onclick="window.location.href='index.html'">Volver al inicio</button>
     </section>
 
-    <script type="text/javascript" src="/js/get_all_odontologos.js"></script>
+    <script type="text/javascript" src="/js/get_all_pacientes.js"></script>
 </body>
 
 </html>
