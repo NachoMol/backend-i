@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
                     '<td class=\"td_nombre\">' + paciente.apellido.toUpperCase() + '</td>' +
                     '<td class=\"td_nombre\">' + paciente.documento.toUpperCase() + '</td>'+
                     '<td class=\"td_nombre\">' + paciente.fechaIngreso.toUpperCase() + '</td>'+
-                    '<td class=\"td_nombre\">' + paciente.domicilio.id.toUpperCase() + '</td>'+
+                    '<td class=\"td_nombre\">' + (paciente.domicilio ? paciente.domicilio.id : '') + '</td>' +
                     '<td class=\"td_nombre\">' + paciente.email.toUpperCase() + '</td>'
                     //+'<td>' + deleteButton + '</td>';
 
@@ -35,5 +35,11 @@ window.addEventListener('load', function () {
     })
     })
 
+    (function(){
+        let pathname = window.location.pathname;
+        if (pathname == "/index.html") {
+            document.querySelector(".nav .nav-item a:last").addClass("active");
+        }
+      })
 
     })
