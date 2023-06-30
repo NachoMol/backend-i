@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Modificar Paciente</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Turnos</a></li>
+            <li><a href="odontologos.html">Odontologos</a></li>
+            <li><a href="pacientes.html">Pacientes</a></li>
+        </ul>
+        <button class="logout-button">Cerrar sesión</button>
+    </nav>
+
+    <section>
+        <h2>Modificar Paciente</h2>
+        <form id="modificar-paciente-form">
+            <label for="paciente-id">ID del Paciente:</label>
+            <input type="text" id="paciente-id" name="paciente-id" required>
+            <label for="paciente-nombre">Nuevo Nombre:</label>
+            <input type="text" id="paciente-nombre" name="paciente-nombre" required>
+            <label for="paciente-apellido">Nuevo Apellido:</label>
+            <input type="text" id="paciente-apellido" name="paciente-apellido" required>
+            <label for="paciente-documento">Nuevo Documento:</label>
+            <input type="text" id="paciente-documento" name="paciente-documento" required>
+            <input type="text" id="paciente-fechaIngreso" name="paciente-fechaIngreso" required>
+            <input type="text" id="paciente-calleDomicilio" name="paciente-calleDomicilio" required>
+            <input type="text" id="paciente-numeroDomicilio" name="paciente-numeroDomicilio" required>
+            <input type="text" id="paciente-localidadDomicilio" name="paciente-localidadDomicilio" required>
+            <input type="text" id="paciente-provinciaDomicilio" name="paciente-provinciaDomicilio" required>
+            <input type="text" id="paciente-email" name="paciente-email" required>
+            <button type="submit">Modificar</button>
+        </form>
+        <div id="mensaje"></div>
+        <button onclick="window.location.href='index.html'">Volver al inicio</button>
+    </section>
+
+    <script src="/js/put_pacientes.js"></script>
+</body>
+
+</html>
