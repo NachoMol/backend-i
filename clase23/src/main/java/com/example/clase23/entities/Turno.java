@@ -11,7 +11,6 @@ import java.time.LocalDate;
 @Table(name = "turnos")
 @Getter
 @Setter
-@AllArgsConstructor
 public class Turno {
 
     @Id
@@ -29,11 +28,5 @@ public class Turno {
     private Odontologo odontologo;
 
     public Turno() {
-    }
-
-    public Turno(LocalDate fecha, Paciente paciente, Odontologo odontologo) {
-        this.fecha = fecha;
-        this.paciente = paciente;
-        this.odontologo = odontologo;
     }
 }

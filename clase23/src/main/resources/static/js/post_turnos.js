@@ -1,65 +1,69 @@
 window.addEventListener('load', function () {
-
-    //Al cargar la pagina buscamos y obtenemos el formulario donde estará el odontologo a agregar
     const formulario = document.querySelector('#add_new_turno');
 
-    //Ante un submit del formulario se ejecutará la siguiente funcion
     formulario.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-       //creamos un JSON que tendrá los datos del nuevo odontologo
         const formData = {
             fecha: document.querySelector('#fecha').value,
-            paciente: document.querySelector('#pacienteId').value,
-            odontologo: document.querySelector('#odontologoId').value,
-
+            paciente: {
+                id: parseInt(document.querySelector('#pacienteId').value),
+                nombre: null,
+                apellido: null,
+                documento: null,
+                fechaIngreso: null,
+                domicilio: {
+                    id: parseInt(document.querySelector('#pacienteId').value),
+                    calle: null,
+                    numero: null,
+                    localidad: null,
+                    provincia: null
+                },
+                email: null
+            },
+            odontologo: {
+                id: parseInt(document.querySelector('#odontologoId').value),
+                nombre: null,
+                apellido: null,
+                matricula: null
+            }
         };
-        //invocamos utilizando la función fetch la API de odontologos con el método POST que guardará
-        //el odontologo en formato JSON
+
         const url = '/turnos';
         const settings = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(formData)
-        }
+            body: JSON.stringify(formData),
+        };
 
         fetch(url, settings)
             .then(response => response.json())
             .then(data => {
-                 //Si no hay ningun error se muestra un mensaje diciendo el odontologo
-                 //se agrego bien
-                 let successAlert = '<div class="alert alert-success alert-dismissible">' +
-                     '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                     '<strong></strong> Turno agregado </div>'
+                let successAlert = '<div class="alert alert-success alert-dismissible">' +
+                    '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                    '<strong></strong> Turno agregado </div>';
 
-                 document.querySelector('#response').innerHTML = successAlert;
-                 document.querySelector('#response').style.display = "block";
-                 resetUploadForm();
-
+                document.querySelector('#response').innerHTML = successAlert;
+                document.querySelector('#response').style.display = "block";
             })
             .catch(error => {
-                    //Si hay algun error se muestra un mensaje diciendo que el odontologo
-                    //no se pudo guardar y se intente nuevamente
-                    let errorAlert = '<div class="alert alert-danger alert-dismissible">' +
-                                     '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                                     '<strong> Error intente nuevamente</strong> </div>'
+                let errorAlert = '<div class="alert alert-danger alert-dismissible">' +
+                    '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                    '<strong> Error intente nuevamente</strong> </div>';
 
-                      document.querySelector('#response').innerHTML = errorAlert;
-                      document.querySelector('#response').style.display = "block";
-                     //se dejan todos los campos vacíos por si se quiere ingresar otro odontologo
-                     resetUploadForm();})
+                document.querySelector('#response').innerHTML = errorAlert;
+                document.querySelector('#response').style.display = "block";
+            });
     });
 
-
-
-
-    (function(){
+    (function () {
         let pathname = window.location.pathname;
-        if(pathname === "/"){
-            document.querySelector(".nav .nav-item a:first").addClass("active");
+        if (pathname === "/") {
+            document.querySelector(".nav .nav-item a:first-child").classList.add("active");
         } else if (pathname == "/peliculaList.html") {
-            document.querySelector(".nav .nav-item a:last").addClass("active");
+            document.querySelector(".nav .nav-item a:last-child").classList.add("active");
         }
     })();
 });

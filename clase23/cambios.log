@@ -280,3 +280,107 @@
 [2023-07-02 13:25:28] [ ERROR] [PacienteController:86] Falló la solicitud de eliminar paciente
 [2023-07-02 13:25:39] [ INFO ] [TurnoController:57] Procesando solicitud de eliminar un turno
 [2023-07-02 13:25:47] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:27:50] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 13:27:53] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:28:08] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:28:13] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:28:16] [ INFO ] [TurnoController:57] Procesando solicitud de eliminar un turno
+[2023-07-02 13:28:18] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:28:28] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 13:28:32] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 13:28:35] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 13:28:53] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:29:00] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:29:03] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:29:09] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:29:13] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
+[2023-07-02 13:29:19] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:30:04] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:30:13] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:30:18] [ INFO ] [TurnoController:57] Procesando solicitud de eliminar un turno
+[2023-07-02 13:30:18] [ ERROR] [TurnoController:63] Falló la solicitud de eliminar un turno
+[2023-07-02 13:30:21] [ INFO ] [TurnoController:57] Procesando solicitud de eliminar un turno
+[2023-07-02 13:52:07] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 13:52:30] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:52:32] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:52:34] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
+[2023-07-02 13:52:45] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:53:28] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:53:30] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 14:07:09] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:07:12] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:07:21] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
+[2023-07-02 14:07:22] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 14:07:28] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:07:32] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:07:36] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 14:07:59] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:10:17] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:10:20] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:10:30] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:11:51] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:11:53] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:12:00] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:16:59] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:17:02] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:17:04] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 14:17:19] [ INFO ] [PacienteController:31] Procesando solicitud de buscar paciente
+[2023-07-02 14:17:19] [ INFO ] [PacienteController:63] Procesando solicitud de modificar paciente
+[2023-07-02 14:17:22] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 14:17:28] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:19:44] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:19:46] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:19:53] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:20:01] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 14:20:15] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:21:14] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:23:06] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
+[2023-07-02 14:23:09] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 14:23:12] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 14:23:17] [ INFO ] [PacienteController:31] Procesando solicitud de buscar paciente
+[2023-07-02 14:23:23] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 14:24:20] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:24:22] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:24:26] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:24:27] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:24:27] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:24:35] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:25:41] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:25:43] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:25:46] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:25:48] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:25:48] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:25:48] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:25:48] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:27:31] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:29:53] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:30:11] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:30:14] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:30:29] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:31:23] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:37:21] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:37:23] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:37:29] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:40:00] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:40:02] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:41:11] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:41:14] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:41:17] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:41:20] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:41:24] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:42:19] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:42:22] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:42:25] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:42:55] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:43:30] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:43:32] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:43:43] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:45:11] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:46:20] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:46:23] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:46:27] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 14:50:21] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
+[2023-07-02 14:50:24] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 14:56:00] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 14:56:02] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 14:56:06] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno

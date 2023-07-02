@@ -38,15 +38,15 @@ public class TurnoController {
         return ResponseEntity.ok(turnoService.devolverTurnos());
     }
     @PostMapping
-    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) throws BadRequestException{
+    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) throws BadRequestException {
         logger.info("Procesando solicitud de registrar un turno");
-        //tratamiento
-        Optional<Paciente> pacienteBuscado=pacienteService.buscarPacientePorID(turno.getId());
-        Optional<Odontologo> odontologoBuscado=odontologoService.buscarOdontologoPorId(turno.getOdontologo().getId());
-        if (pacienteBuscado.isPresent() && odontologoBuscado.isPresent()){
+
+        Optional<Paciente> pacienteBuscado = pacienteService.buscarPacientePorID(turno.getPaciente().getId());
+        Optional<Odontologo> odontologoBuscado = odontologoService.buscarOdontologoPorId(turno.getOdontologo().getId());
+
+        if (pacienteBuscado.isPresent() && odontologoBuscado.isPresent()) {
             return ResponseEntity.ok(turnoService.guardarTurno(turno));
-        }
-        else{
+        } else {
             logger.error("Falló la solicitud de registrar un turno");
             throw new BadRequestException("No existe el id asociado en la base de datos");
         }
