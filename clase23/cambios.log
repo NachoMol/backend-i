@@ -190,3 +190,93 @@
 [2023-06-29 22:56:49] [ INFO ] [PacienteController:31] Procesando solicitud de buscar paciente
 [2023-06-29 22:56:49] [ INFO ] [PacienteController:63] Procesando solicitud de modificar paciente
 [2023-06-29 22:56:51] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:13:36] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:13:38] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:13:56] [ INFO ] [PacienteController:31] Procesando solicitud de buscar paciente
+[2023-07-02 13:13:56] [ INFO ] [PacienteController:63] Procesando solicitud de modificar paciente
+[2023-07-02 13:14:01] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:14:06] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:14:07] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:14:07] [ ERROR] [PacienteController:86] Falló la solicitud de eliminar paciente
+[2023-07-02 13:14:08] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:14:08] [ ERROR] [PacienteController:86] Falló la solicitud de eliminar paciente
+[2023-07-02 13:14:09] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:14:26] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:14:32] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:14:40] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:14:41] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:14:41] [ ERROR] [PacienteController:86] Falló la solicitud de eliminar paciente
+[2023-07-02 13:14:42] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:14:45] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:15:03] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:15:08] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 13:15:21] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:15:25] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:15:25] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:15:31] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:15:31] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:15:38] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:15:42] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:15:42] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:16:01] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
+[2023-07-02 13:16:04] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:16:16] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:16:16] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:16:43] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:16:52] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:16:52] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:16:54] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:17:22] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:17:22] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:17:27] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:17:27] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:17:31] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:17:31] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:17:34] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:17:34] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:17:42] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:17:42] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:18:06] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:18:06] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:18:25] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 13:18:27] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:18:36] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:18:57] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:19:04] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:19:13] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:19:17] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:19:18] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:19:19] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:19:21] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-02 13:20:01] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:20:20] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:21:25] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:23:03] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:23:06] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:23:09] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-02 13:23:11] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-02 13:23:14] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:23:14] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:23:24] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:23:24] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:23:27] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:23:27] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:23:31] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:23:31] [ ERROR] [TurnoController:50] Falló la solicitud de registrar un turno
+[2023-07-02 13:23:37] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-02 13:23:53] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:24:28] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:24:28] [ ERROR] [PacienteController:86] Falló la solicitud de eliminar paciente
+[2023-07-02 13:24:33] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:24:36] [ INFO ] [TurnoController:57] Procesando solicitud de eliminar un turno
+[2023-07-02 13:24:40] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:24:42] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:24:43] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:24:52] [ INFO ] [TurnoController:57] Procesando solicitud de eliminar un turno
+[2023-07-02 13:24:52] [ ERROR] [TurnoController:62] Falló la solicitud de eliminar un turno
+[2023-07-02 13:24:56] [ INFO ] [TurnoController:57] Procesando solicitud de eliminar un turno
+[2023-07-02 13:25:13] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-02 13:25:28] [ INFO ] [PacienteController:79] Procesando solicitud de eliminar paciente
+[2023-07-02 13:25:28] [ ERROR] [PacienteController:86] Falló la solicitud de eliminar paciente
+[2023-07-02 13:25:39] [ INFO ] [TurnoController:57] Procesando solicitud de eliminar un turno
+[2023-07-02 13:25:47] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos

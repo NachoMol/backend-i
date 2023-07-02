@@ -57,6 +57,7 @@ public class TurnoController {
         logger.info("Procesando solicitud de eliminar un turno");
         Optional<Turno> turnoBuscado= turnoService.buscarTurnoPorId(id);
         if(turnoBuscado.isPresent()){
+            turnoService.eliminarTurno(turnoBuscado.get().getId());
             return ResponseEntity.ok("Se elimino el turno corrrectamente con id: " + id);
         }else{
             logger.error("Falló la solicitud de eliminar un turno");

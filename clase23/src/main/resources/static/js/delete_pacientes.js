@@ -17,6 +17,5 @@ document.getElementById("eliminar-paciente-form").addEventListener("submit", fun
     })
     .catch(error => {
         console.error("Error en la solicitud:", error);
-        document.getElementById("mensaje").innerHTML = "<p>Ocurrió un error al eliminar el paciente. Por favor, inténtalo de nuevo más tarde.</p>";
     });
 });
