@@ -182,3 +182,11 @@
 [2023-06-29 22:53:35] [ INFO ] [PacienteController:45] Procesando solicitud de buscar paciente por correo
 [2023-06-29 22:53:35] [ ERROR] [PacienteController:50] Falló la solicitud de buscar paciente por correo
 [2023-06-29 22:55:31] [ INFO ] [PacienteController:31] Procesando solicitud de buscar paciente
+[2023-06-29 22:56:25] [ INFO ] [PacienteController:31] Procesando solicitud de buscar paciente
+[2023-06-29 22:56:25] [ ERROR] [PacienteController:36] Falló la solicitud de buscar paciente
+[2023-06-29 22:56:29] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-06-29 22:56:31] [ INFO ] [PacienteController:31] Procesando solicitud de buscar paciente
+[2023-06-29 22:56:37] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-06-29 22:56:49] [ INFO ] [PacienteController:31] Procesando solicitud de buscar paciente
+[2023-06-29 22:56:49] [ INFO ] [PacienteController:63] Procesando solicitud de modificar paciente
+[2023-06-29 22:56:51] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
