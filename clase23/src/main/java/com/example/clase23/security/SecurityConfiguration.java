@@ -30,21 +30,26 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                /*.csrf().disable()
+                .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/index.html").hasAnyRole("ADMIN","USER")
                 .antMatchers("/odontologos/**","/get_all_odontologos.html").hasRole("ADMIN")
                 .antMatchers("/odontologos/**","/post_odontologos.html").hasRole("ADMIN")
-                //FALTA AGREGAR EL RESTO DE METODOS DE ODONTOLOGOS (HTML TMB) PACIENTES e INDEX
+                .antMatchers("/odontologos/**","/delete_odontologos.html").hasRole("ADMIN")
+                .antMatchers("/odontologos/**","/put_odontologos.html").hasRole("ADMIN")
+                .antMatchers("/pacientes/**","/post_pacientes.html").hasRole("ADMIN")
+                .antMatchers("/pacientes/**","/get_all_pacientes.html").hasRole("ADMIN")
+                .antMatchers("/pacientes/**","/put_pacientes.html").hasRole("ADMIN")
+                .antMatchers("/pacientes/**","/delete_pacientes.html").hasRole("ADMIN")
                 .antMatchers("/turnos/**").hasAnyRole("ADMIN","USER")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .and()
-                .logout();*/
-                .csrf().disable()
+                .logout();
+                /*.csrf().disable()
                 .authorizeRequests()
-                .anyRequest().permitAll();
+                .anyRequest().permitAll();*/
 
     }
 

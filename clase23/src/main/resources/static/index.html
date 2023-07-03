@@ -12,7 +12,7 @@
         <li><a href="#odontologos">Odontologos</a></li>
         <li><a href="#pacientes">Pacientes</a></li>
     </ul>
-    <button id="logout-btn">Cerrar sesion</button>
+    <button id="logout-btn" onclick="window.location.href='login'">Cerrar sesion</button>
 </nav>
 
 <section id="turnos">
@@ -49,6 +49,7 @@
         logoutButton.addEventListener('click', () => {
             // Aquí puedes agregar la lógica para realizar el logout
             // Puede ser una redirección a una página de inicio de sesión, limpiar la sesión actual, etc.
+
             alert('Has cerrado sesión');
         });
     </script>
