@@ -523,3 +523,17 @@
 [2023-07-03 18:18:05] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
 [2023-07-03 18:18:12] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
 [2023-07-03 18:18:15] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
+[2023-07-03 18:19:32] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-03 18:19:33] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-03 18:19:38] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
+[2023-07-03 18:19:43] [ INFO ] [PacienteController:57] Procesando solicitud de listar pacientes
+[2023-07-03 18:19:47] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
+[2023-07-03 18:34:45] [ INFO ] [OdontologoController:45] Procesando solicitud de listar odontologos
+[2023-07-03 18:34:52] [ INFO ] [OdontologoController:26] Procesando solicitud de agregar Odontologo
+[2023-07-03 18:35:06] [ INFO ] [PacienteController:26] Procesando solicitud de agregar paciente
+[2023-07-03 18:35:11] [ INFO ] [TurnoController:42] Procesando solicitud de registrar un turno
+[2023-07-03 18:35:13] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
+[2023-07-03 18:35:15] [ INFO ] [TurnoController:57] Procesando solicitud de eliminar un turno
+[2023-07-03 18:35:16] [ INFO ] [TurnoController:57] Procesando solicitud de eliminar un turno
+[2023-07-03 18:35:16] [ ERROR] [TurnoController:63] Falló la solicitud de eliminar un turno
+[2023-07-03 18:35:17] [ INFO ] [TurnoController:37] Procesando solicitud de listar turnos
